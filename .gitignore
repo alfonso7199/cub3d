@@ -1,0 +1,10 @@
+*/.git
+GNL/.git
+Libft/.git
+
+obj/*
+libft/*.o
+libft/libft.a
+
+cub3d
+*.txt
