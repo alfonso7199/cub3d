@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+         #
+#    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/07/04 17:30:55 by rzt              ###   ########.fr        #
+#    Updated: 2025/07/24 15:36:05 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,9 @@ INCLUDE_DIR = ./include
 LIBFT_DIR	= ./libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 LIBFT_FLAGS	= -L$(LIBFT_DIR) -lft
+MLX_DIR		= ./mlx
+MLX_FLAGS	= -L$(MLX_DIR) -lmlx
+LDFLAGS		= -lm -lX11 -lXext $(MLX_FLAGS)
 
 SRC_DIR		= ./src
 

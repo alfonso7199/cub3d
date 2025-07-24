@@ -1,0 +1,7 @@
+Checks:             'modernize-*,clang-analyzer-*,cppcoreguidelines-*'
+WarningsAsErrors:   'modernize-use-nullptr'
+HeaderFilterRegex:  '.*'
+FormatStyle:        file
+CheckOptions:
+  - key:            modernize-use-nullptr.NullMacros
+    value:          'NULL'
