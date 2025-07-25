@@ -19,8 +19,8 @@ LIBFT_DIR	= ./libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 LIBFT_FLAGS	= -L$(LIBFT_DIR) -lft
 MLX_DIR		= ./mlx
-MLX_FLAGS	= -L$(MLX_DIR) -lmlx
-LDFLAGS		= -lm -lX11 -lXext $(MLX_FLAGS)
+MLX_FLAGS	= -L$(MLX_DIR) -lmlx -lX11 -lXext
+LDFLAGS		= -lm
 
 SRC_DIR		= ./src
 
@@ -36,7 +36,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
 	@echo "Linking Cub3d..."
-	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT_FLAGS) -o $(NAME) $(LDFLAGS)
+	@$(CC) $(CFLAGS) $(OBJS) $(LIBFT_FLAGS) $(MLX_FLAGS) $(LDFLAGS) -o $(NAME)
 	@echo "Cub3d compilation completed!"
 
 $(LIBFT):
