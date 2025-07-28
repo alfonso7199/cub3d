@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/07/28 12:31:12 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:42:17 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <unistd.h>	// close, read, write
 # include <string.h>	// strerror
 # include <sys/time.h>	// gettimeofday
+# include <X11/keysym.h> // KEYS
 
 # define GREEN    "\033[32m"
 # define RESET    "\033[0m"
@@ -45,6 +46,10 @@ typedef struct s_game
 
 // Init
 t_game	*init_game(void);
+
+// Events
+int		handle_no_event(void *game);
+int		handle_input(int keysym, void *param);
 
 // Free
 void	ft_free(t_game *game);

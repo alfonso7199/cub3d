@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 12:39:59 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/07/28 15:50:14 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,8 @@ int	main(int argc, char *argv[])
 	game->window->mlx_ptr = mlx_init();
 	game->window->win_ptr = mlx_new_window(game->window->mlx_ptr,
 			WIN_WIDTH, WIN_HEIGHT, GAME_NAME);
-	while (1)
-	{
-		usleep(1);
-	}
-	mlx_destroy_window(game->window->mlx_ptr, game->window->win_ptr);
-	mlx_destroy_display(game->window->mlx_ptr);
-	ft_free(game);
+	mlx_loop_hook(game->window->mlx_ptr, &handle_no_event, game);
+	mlx_key_hook(game->window->win_ptr, &handle_input, game);
+	mlx_loop(game->window->mlx_ptr);
 	return (0);
 }
