@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/07/24 15:30:56 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/07/28 12:31:12 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,27 @@
 # define RESET    "\033[0m"
 # define RED      "\033[31m"
 
+# define WIN_WIDTH 600
+# define WIN_HEIGHT 800
+# define GAME_NAME "CUB3D"
+
+typedef struct s_window
+{
+	void	*mlx_ptr;
+	void	*win_ptr;
+	int		height;
+	int		width;
+}	t_window;
+
+typedef struct s_game
+{
+	t_window	*window;
+}	t_game;
+
+// Init
+t_game	*init_game(void);
+
+// Free
+void	ft_free(t_game *game);
 
 #endif

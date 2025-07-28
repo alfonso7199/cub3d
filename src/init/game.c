@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.c                                            :+:      :+:    :+:   */
+/*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 12:39:59 by rzamolo-         ###   ########.fr       */
+/*   Created: 2025/07/28 12:26:43 by rzamolo-          #+#    #+#             */
+/*   Updated: 2025/07/28 12:27:05 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/cub3d.h"
+#include "../../include/cub3d.h"
 
-int	main(int argc, char *argv[])
+t_game	*init_game(void)
 {
 	t_game	*game;
 
-	(void)argc;
-	(void)argv;
-	game = init_game();
-	game->window->mlx_ptr = mlx_init();
-	game->window->win_ptr = mlx_new_window(game->window->mlx_ptr,
-			WIN_WIDTH, WIN_HEIGHT, GAME_NAME);
-	while (1)
+	game = malloc(sizeof(t_game));
+	if (!game)
+		return (NULL);
+	game->window = malloc(sizeof(t_window));
+	if (!game->window)
 	{
-		usleep(1);
+		free(game);
+		return (NULL);
 	}
-	mlx_destroy_window(game->window->mlx_ptr, game->window->win_ptr);
-	mlx_destroy_display(game->window->mlx_ptr);
-	ft_free(game);
-	return (0);
+	return (game);
 }

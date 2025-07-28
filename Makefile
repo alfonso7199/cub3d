@@ -6,13 +6,13 @@
 #    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/07/24 15:36:05 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/07/28 12:36:24 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= cub3d
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror -g
 RM			= rm -rf
 INCLUDE_DIR = ./include
 LIBFT_DIR	= ./libft
@@ -28,6 +28,8 @@ OBJ_DIR		= obj
 
 SRC_FILES	= \
     $(SRC_DIR)/cub3d.c \
+	$(SRC_DIR)/init/game.c \
+	$(SRC_DIR)/free/free.c \
 
 
 OBJS        = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
