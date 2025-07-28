@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 12:29:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 15:52:15 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/07/28 17:32:43 by rzt              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_free(t_game *game)
 			mlx_destroy_window(game->window->mlx_ptr, game->window->win_ptr);
 		free(game->window);
 		game->window = NULL;
-	}
 		if (mlx_ptr)
-			mlx_destroy_display(game->window->mlx_ptr);
-		free(game);
+			mlx_destroy_display(mlx_ptr);
+	}
+	free(game);
 }

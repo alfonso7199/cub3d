@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 15:50:14 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/07/28 17:33:14 by rzt              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	main(int argc, char *argv[])
 
 	(void)argc;
 	(void)argv;
+	game = NULL;
 	game = init_game();
 	game->window->mlx_ptr = mlx_init();
 	game->window->win_ptr = mlx_new_window(game->window->mlx_ptr,
