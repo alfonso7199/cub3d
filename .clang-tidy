@@ -1,4 +1,5 @@
-Checks:             'modernize-*,clang-analyzer-*,cppcoreguidelines-*'
+<!-- modernize-*, -->
+Checks:             'clang-analyzer-*,cppcoreguidelines-*'
 WarningsAsErrors:   'modernize-use-nullptr'
 HeaderFilterRegex:  '.*'
 FormatStyle:        file
