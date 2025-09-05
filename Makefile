@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+         #
+#    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/07/28 17:57:19 by rzt              ###   ########.fr        #
+#    Updated: 2025/09/05 19:00:39 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,9 @@ norm:
 	@norminette include/*
 	@echo "\n"
 	@norminette src/*
+
+keycap:
+	@cc src/keycapture.c -lmlx -lX11 -lXext -lm -o keycapture
 
 run:	all
 	@./cub3d

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   event.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:52:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 17:34:51 by rzt              ###   ########.fr       */
+/*   Updated: 2025/09/05 18:45:28 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	handle_input(int keysym, void *param)
 	t_game	*game;
 
 	game = (t_game *)param;
-	if (keysym == XK_Escape)
+	if (keysym == 65307)
 	{
 		ft_free(game);
 		exit (0);
