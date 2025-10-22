@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+         #
+#    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/09/05 19:00:39 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/10/22 17:22:22 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ LIBFT_DIR	= ./libft
 LIBFT		= $(LIBFT_DIR)/libft.a
 LIBFT_FLAGS	= -L$(LIBFT_DIR) -lft
 MLX_DIR		= ./mlx
-MLX_FLAGS	= -L$(MLX_DIR) -lmlx -lX11 -lXext
+MLX			= $(MLX_DIR)/libmlx42.a
+MLX_FLAGS	= -L$(MLX_DIR) -lmlx42 -ldl -lglfw -pthread 
 LDFLAGS		= -lm
 
 SRC_DIR		= ./src
@@ -28,9 +29,7 @@ OBJ_DIR		= obj
 
 SRC_FILES	= \
     $(SRC_DIR)/cub3d.c \
-	$(SRC_DIR)/inits/game.c \
-	$(SRC_DIR)/events/event.c \
-	$(SRC_DIR)/frees/free.c \
+	$(SRC_DIR)/inits/settings.c
 
 
 OBJS        = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
@@ -68,7 +67,7 @@ norm:
 	@norminette src/*
 
 keycap:
-	@cc src/keycapture.c -lmlx -lX11 -lXext -lm -o keycapture
+	@cc src/mlx42_test.c mlx/libmlx42.a $(MLX_FLAGS) -o keycapture
 
 run:	all
 	@./cub3d

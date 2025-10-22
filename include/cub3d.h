@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/07/28 17:58:20 by rzt              ###   ########.fr       */
+/*   Updated: 2025/10/22 17:25:29 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CUB3D_H
 
 # include "../libft/libft.h"
-# include "../mlx/mlx.h"
+# include "../mlx/MLX42.h"
 # include <fcntl.h>		// open, 
 # include <stdio.h>		// printf, perror
 # include <stdlib.h>	// malloc, free, exit
@@ -27,8 +27,8 @@
 # define RESET    "\033[0m"
 # define RED      "\033[31m"
 
-# define WIN_WIDTH 600
-# define WIN_HEIGHT 800
+# define WIN_WIDTH 480
+# define WIN_HEIGHT 480
 # define GAME_NAME "CUB3D"
 
 typedef struct s_window
@@ -44,7 +44,9 @@ typedef struct s_game
 	t_window	*window;
 }	t_game;
 
-// Init
+// Init - settings
+void	set_mlx_settings(void);
+// Init - game
 t_game	*init_game(void);
 
 // Events
