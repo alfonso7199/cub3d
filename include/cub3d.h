@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/10/22 17:25:29 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/23 16:43:11 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define RESET    "\033[0m"
 # define RED      "\033[31m"
 
+// MLX
 # define WIN_WIDTH 480
 # define WIN_HEIGHT 480
 # define GAME_NAME "CUB3D"
@@ -44,10 +45,19 @@ typedef struct s_game
 	t_window	*window;
 }	t_game;
 
+typedef enum	e_bool
+{
+	FALSE = 0,
+	TRUE = 1
+}	t_bool;
+
 // Init - settings
 void	set_mlx_settings(void);
 // Init - game
 t_game	*init_game(void);
+
+// validations - extension
+t_bool	validate_map_extension(const char *path);
 
 // Events
 int		handle_no_event(void *game);

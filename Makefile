@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/10/22 17:22:22 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/10/23 16:27:57 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ OBJ_DIR		= obj
 
 SRC_FILES	= \
     $(SRC_DIR)/cub3d.c \
-	$(SRC_DIR)/inits/settings.c
+	$(SRC_DIR)/inits/settings.c \
+	$(SRC_DIR)/validations/extension.c \
 
 
 OBJS        = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
