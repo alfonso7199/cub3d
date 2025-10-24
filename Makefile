@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/10/23 16:27:57 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/10/24 19:15:16 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,3 +74,8 @@ run:	all
 	@./cub3d
 
 .PHONY: all clean fclean re
+
+# The command below is used to generate the file `compile_commands.json` to clangd extension
+# (yay -S bear). And can follow link to function definition or declaration
+
+# bear -- make clean all
