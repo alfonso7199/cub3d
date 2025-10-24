@@ -32,17 +32,10 @@
 # define WIN_HEIGHT 480
 # define GAME_NAME "CUB3D"
 
-typedef struct s_window
-{
-	void	*mlx_ptr;
-	void	*win_ptr;
-	int		height;
-	int		width;
-}	t_window;
-
 typedef struct s_game
 {
-	t_window	*window;
+	mlx_t		*mlx;
+	mlx_image_t	*frame;
 }	t_game;
 
 typedef enum	e_bool

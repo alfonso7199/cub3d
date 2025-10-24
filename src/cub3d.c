@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/23 16:27:14 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:50:42 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ static void	ft_hook(void *param)
 
 int	main(int argc, char *argv[])
 {
-	mlx_t		*mlx;
-	mlx_image_t	*img;
+	t_game	game;
 
 	// Before mlx_init
 	if (argc != 2)
@@ -37,17 +36,23 @@ int	main(int argc, char *argv[])
 		ft_putendl_fd("Error: number of argumets invalid!", STDOUT_FILENO);
 		return (EXIT_FAILURE);
 	}
-	validate_map_extension(argv[1]);
+	if (!validate_map_extension(argv[1]))
+		return (EXIT_FAILURE);
 	set_mlx_settings();
-	mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, false);
-	if (!mlx)
-		ft_error();
-	img = mlx_new_image(mlx, WIN_WIDTH, WIN_HEIGHT);
-	if (!img || (mlx_image_to_window(mlx, img, 0, 0) < 0))
-		ft_error();
-	mlx_put_pixel(img, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFFFF); 
-	mlx_loop_hook(mlx, ft_hook, mlx);
-	mlx_loop(mlx);
-	mlx_terminate(mlx);
+
+	game.mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, false);
+	if (!game.mlx)
+		return (ft_error(), EXIT_FAILURE);
+
+	game.frame = mlx_new_image(game.mlx, WIN_WIDTH, WIN_HEIGHT);
+	if (!game.frame || (mlx_image_to_window(game.mlx, game.frame, 0, 0) < 0))
+		return (ft_error(), EXIT_FAILURE);
+
+	mlx_put_pixel(game.frame, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFFFF); 
+	mlx_loop_hook(game.mlx, ft_hook, game.mlx);
+	mlx_loop(game.mlx);
+	mlx_delete_image(game.mlx, game.frame);
+	mlx_terminate(game.mlx);
 	return (EXIT_SUCCESS);
 }
+
