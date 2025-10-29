@@ -38,6 +38,20 @@ typedef struct s_game
 	mlx_image_t	*frame;
 }	t_game;
 
+//TODO: todas las structuras son básicas, es para hacernos una idea inicial y luego ir viendo que más podemos necesitar
+
+typedef struct s_player
+{
+	float	x;
+	float	y;
+}	t_player;
+
+typedef struct s_ray
+{
+	float	dir_x;
+	float	dir_y;
+}	t_ray;
+
 typedef enum	e_bool
 {
 	FALSE = 0,

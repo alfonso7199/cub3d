@@ -20,10 +20,10 @@ static void	ft_error(void)
 
 static void	ft_hook(void *param)
 {
-	const mlx_t	*mlx;
+	mlx_t	*mlx;
 
-	mlx = param;
-	printf("WIN_WIDTH: %d | WIN_HEIGHT: %d\n", mlx->width, mlx->height);
+	mlx = (mlx_t *)param;
+	(void)mlx;
 }
 
 int	main(int argc, char *argv[])

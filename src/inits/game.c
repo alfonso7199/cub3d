@@ -12,16 +12,23 @@
 
 #include "../../include/cub3d.h"
 
-t_game	*init_game(void)
+t_game *init_game(void)
 {
-	t_game	*game;
+	t_game *game;
 
-	game = malloc(sizeof(t_game));
+	game = malloc(sizeof *game);
 	if (!game)
 		return (NULL);
-	game->window = malloc(sizeof(t_window));
-	if (!game->window)
+	game->mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, true);
+	if (!game->mlx)
 	{
+		free(game);
+		return (NULL);
+	}
+	game->frame = mlx_new_image(game->mlx, WIN_WIDTH, WIN_HEIGHT);
+	if (!game->frame)
+	{
+		mlx_terminate(game->mlx);
 		free(game);
 		return (NULL);
 	}
