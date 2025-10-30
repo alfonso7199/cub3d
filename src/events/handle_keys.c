@@ -11,33 +11,57 @@
 /* ************************************************************************** */
 #include "cub3d.h"
 
-int	handle_keypress(int keycode, t_game *game)
+int	handle_keypress(mlx_key_data_t keydata, void *param)
 {
-	if (keycode == 65307)
-	{
-		close_game(game);
-	}
-	else if (keycode == 119 || keycode == 65362)
-	{
-		move_player(game, 0, -1);
-	}
-	else if (keycode == 115 || keycode == 65364)
-	{
-		move_player(game, 0, 1);
-	}
-	else if (keycode == 97 || keycode == 65361)
-	{
-		move_player(game, -1, 0);
-	}
-	else if (keycode == 100 || keycode == 65363)
-	{
-		move_player(game, 1, 0);
-	}
-	return (0);
+	t_game	*game;
+
+	game = (t_game *)param;
+	if (keydata.action != MLX_PRESS && keydata.action != MLX_REPEAT)
+		return;
+	if (keydata.key == MLX_KEY_ESCAPE)
+		game->keys.esc = TRUE;
+	else if (keydata.key == MLX_KEY_W)
+		game->keys.w = TRUE;
+	else if (keydata.key == MLX_KEY_S)
+		game->keys.s = TRUE;
+	else if (keydata.key == MLX_KEY_A)
+		game->keys.a = TRUE;
+	else if (keydata.key == MLX_KEY_D)
+		game->keys.d = TRUE;
+	else if (keydata.key == MLX_KEY_LEFT)
+		game->keys.left = TRUE;
+	else if (keydata.key == MLX_KEY_RIGHT)
+		game->keys.right = TRUE;
+}
+
+void	key_release(mlx_key_data_t keydata, void *param)
+{
+	t_game	*game;
+
+	game = (t_game *)param;
+	if (keydata.action != MLX_RELEASE)
+		return;
+	if (keydata.key == MLX_KEY_W)
+		game->keys.w = FALSE;
+	else if (keydata.key == MLX_KEY_S)
+		game->keys.s = FALSE;
+	else if (keydata.key == MLX_KEY_A)
+		game->keys.a = FALSE;
+	else if (keydata.key == MLX_KEY_D)
+		game->keys.d = FALSE;
+	else if (keydata.key == MLX_KEY_LEFT)
+		game->keys.left = FALSE;
+	else if (keydata.key == MLX_KEY_RIGHT)
+		game->keys.right = FALSE;
 }
 
 int	close_game(t_game *game)
 {
+	if (game->keys.esc)
+	{
+		mlx_close_window(game->mlx);
+		return;
+	}
 	// if (game->wall)
 	// 	mlx_destroy_image(game->mlx, game->wall);
 	// if (game->player)

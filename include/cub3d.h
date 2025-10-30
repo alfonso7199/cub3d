@@ -89,6 +89,17 @@ typedef struct s_ray
 	int		draw_end;
 }	t_ray;
 
+typedef struct s_keys
+{
+	t_bool	w;
+	t_bool	a;
+	t_bool	s;
+	t_bool	d;
+	t_bool	left;
+	t_bool	right;
+	t_bool	esc;
+}	t_keys;
+
 typedef struct s_game
 {
 	mlx_t		*mlx;
@@ -98,6 +109,7 @@ typedef struct s_game
 	t_colors	ceiling;
 	t_map		map;
 	t_player	player;
+	t_keys			keys;
 }	t_game;
 
 typedef enum	e_bool
@@ -120,6 +132,9 @@ int		open_file(t_game *game, const char *path);
 // Events
 int		handle_no_event(void *game);
 int		handle_input(int keysym, void *param);
+void	key_press(mlx_key_data_t keydata, void *param);
+void	key_release(mlx_key_data_t keydata, void *param);
+int		close_game(t_game *game);
 
 // Free
 void	ft_free(t_game *game);
