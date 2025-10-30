@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/10/23 16:43:11 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/30 12:32:58 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,25 +32,49 @@
 # define WIN_HEIGHT 480
 # define GAME_NAME "CUB3D"
 
-typedef struct s_game
+typedef struct s_textures
 {
-	mlx_t		*mlx;
-	mlx_image_t	*frame;
-}	t_game;
+	char	*north;
+	char	*south;
+	char	*west;
+	char	*east;
+}	t_textures;
+
+typedef struct s_colors
+{
+	int	r;
+	int	g;
+	int	b;
+}	t_colors;
+
+typedef struct s_map
+{
+	char	**grid;
+	int		width;
+	int		height;
+}	t_map;
 
 //TODO: todas las structuras son básicas, es para hacernos una idea inicial y luego ir viendo que más podemos necesitar
-
 typedef struct s_player
 {
 	float	x;
 	float	y;
+	float	direction_x;
+	float	direction_y;
+	float	horizon_x;
+	float	horizon_y;
 }	t_player;
 
-typedef struct s_ray
+typedef struct s_game
 {
-	float	dir_x;
-	float	dir_y;
-}	t_ray;
+	mlx_t		*mlx;
+	mlx_image_t	*frame;
+	t_textures	textures;
+	t_colors	floor;
+	t_colors	ceiling;
+	t_map		map;
+	t_player	player;
+}	t_game;
 
 typedef enum	e_bool
 {
@@ -65,6 +89,9 @@ t_game	*init_game(void);
 
 // validations - extension
 t_bool	validate_map_extension(const char *path);
+
+// Parsing
+int		open_file(t_game *game, const char *path);
 
 // Events
 int		handle_no_event(void *game);

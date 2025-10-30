@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/24 12:50:42 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/30 12:33:09 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int argc, char *argv[])
 	game.frame = mlx_new_image(game.mlx, WIN_WIDTH, WIN_HEIGHT);
 	if (!game.frame || (mlx_image_to_window(game.mlx, game.frame, 0, 0) < 0))
 		return (ft_error(), EXIT_FAILURE);
-
+	open_file(&game, argv[1]);
 	mlx_put_pixel(game.frame, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFFFF); 
 	mlx_loop_hook(game.mlx, ft_hook, game.mlx);
 	mlx_loop(game.mlx);

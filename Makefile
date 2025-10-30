@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/10/24 19:15:16 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/10/30 12:16:04 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC_FILES	= \
     $(SRC_DIR)/cub3d.c \
 	$(SRC_DIR)/inits/settings.c \
 	$(SRC_DIR)/validations/extension.c \
+	$(SRC_DIR)/parsing/parse_file.c \
 
 
 OBJS        = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
@@ -70,8 +71,8 @@ norm:
 keycap:
 	@cc src/mlx42_test.c mlx/libmlx42.a $(MLX_FLAGS) -o keycapture
 
-run:	all
-	@./cub3d
+run:	re
+	@./cub3d assets/maps/sample_map.cub
 
 .PHONY: all clean fclean re
 
