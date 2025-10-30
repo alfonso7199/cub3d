@@ -32,6 +32,10 @@
 # define WIN_HEIGHT 480
 # define GAME_NAME "CUB3D"
 
+// No se si es lento o rápido, habra que ver
+# define MOVE_SPEED 0.05
+# define ROT_SPEED 0.03
+
 typedef struct s_textures
 {
 	char	*north;
@@ -55,15 +59,35 @@ typedef struct s_map
 }	t_map;
 
 //TODO: todas las structuras son básicas, es para hacernos una idea inicial y luego ir viendo que más podemos necesitar
+
+typedef struct s_vec2
+{
+	double	x;
+	double	y;
+}	t_vec2;
+
 typedef struct s_player
 {
-	float	x;
-	float	y;
-	float	direction_x;
-	float	direction_y;
-	float	horizon_x;
-	float	horizon_y;
+	t_vec2	pos;
+	t_vec2	dir;
+	t_vec2	plane; 
 }	t_player;
+
+typedef struct s_ray
+{
+	t_vec2	dir;
+	t_vec2	side_dist;
+	t_vec2	delta_dist;
+	double	perp_wall_dist;
+	int		step_x;
+	int		step_y;
+	int		map_x;
+	int		map_y;
+	int		side;
+	int		line_height;
+	int		draw_start;
+	int		draw_end;
+}	t_ray;
 
 typedef struct s_game
 {
