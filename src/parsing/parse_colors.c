@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:52:18 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 15:11:02 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 16:59:37 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,16 @@
 
 static int	parse_component(char *str)
 {
+	int	i;
 	int	n;
 
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == '\n')
+			str[i] = '\0';
+		i++;
+	}
 	n = ft_atoi(str);
 	if (n < 0 || n > 255)
 	{
