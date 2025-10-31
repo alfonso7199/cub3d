@@ -9,50 +9,56 @@
 /*   Updated: 2024/07/17 17:05:05 by alfsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "cub3d.h"
+#include "../../include/cub3d.h"
 
-int	handle_keypress(mlx_key_data_t keydata, void *param)
+void	key_press(t_game *game, int key)
 {
-	t_game	*game;
-
-	game = (t_game *)param;
-	if (keydata.action != MLX_PRESS && keydata.action != MLX_REPEAT)
-		return;
-	if (keydata.key == MLX_KEY_ESCAPE)
-		game->keys.esc = TRUE;
-	else if (keydata.key == MLX_KEY_W)
-		game->keys.w = TRUE;
-	else if (keydata.key == MLX_KEY_S)
-		game->keys.s = TRUE;
-	else if (keydata.key == MLX_KEY_A)
-		game->keys.a = TRUE;
-	else if (keydata.key == MLX_KEY_D)
-		game->keys.d = TRUE;
-	else if (keydata.key == MLX_KEY_LEFT)
-		game->keys.left = TRUE;
-	else if (keydata.key == MLX_KEY_RIGHT)
-		game->keys.right = TRUE;
+    if (key == MLX_KEY_ESCAPE)
+        game->keys.esc = TRUE;
+    if (key == MLX_KEY_W)
+        game->keys.w = TRUE;
+    if (key == MLX_KEY_S)
+        game->keys.s = TRUE;
+    if (key == MLX_KEY_A)
+        game->keys.a = TRUE;
+    if (key == MLX_KEY_D)
+        game->keys.d = TRUE;
+    if (key == MLX_KEY_LEFT)
+        game->keys.left = TRUE;
+    if (key == MLX_KEY_RIGHT)
+        game->keys.right = TRUE;
 }
 
-void	key_release(mlx_key_data_t keydata, void *param)
+void	key_release(t_game *game, int key)
 {
-	t_game	*game;
+    if (key == MLX_KEY_W)
+        game->keys.w = FALSE;
+    if (key == MLX_KEY_S)
+        game->keys.s = FALSE;
+    if (key == MLX_KEY_A)
+        game->keys.a = FALSE;
+    if (key == MLX_KEY_D)
+        game->keys.d = FALSE;
+    if (key == MLX_KEY_LEFT)
+        game->keys.left = FALSE;
+    if (key == MLX_KEY_RIGHT)
+        game->keys.right = FALSE;
+}
 
-	game = (t_game *)param;
-	if (keydata.action != MLX_RELEASE)
-		return;
-	if (keydata.key == MLX_KEY_W)
-		game->keys.w = FALSE;
-	else if (keydata.key == MLX_KEY_S)
-		game->keys.s = FALSE;
-	else if (keydata.key == MLX_KEY_A)
-		game->keys.a = FALSE;
-	else if (keydata.key == MLX_KEY_D)
-		game->keys.d = FALSE;
-	else if (keydata.key == MLX_KEY_LEFT)
-		game->keys.left = FALSE;
-	else if (keydata.key == MLX_KEY_RIGHT)
-		game->keys.right = FALSE;
+void	key_event(mlx_key_data_t keydata, void *param)
+{
+    t_game	*game;
+
+    game = (t_game *)param;
+    if (keydata.action == MLX_PRESS || keydata.action == MLX_REPEAT)
+    {
+        key_press(game, keydata.key);
+        return ;
+    }
+    if (keydata.action == MLX_RELEASE)
+    {
+        key_release(game, keydata.key);
+    }
 }
 
 int	close_game(t_game *game)
@@ -60,7 +66,7 @@ int	close_game(t_game *game)
 	if (game->keys.esc)
 	{
 		mlx_close_window(game->mlx);
-		return;
+		return (0);
 	}
 	// if (game->wall)
 	// 	mlx_destroy_image(game->mlx, game->wall);
@@ -72,4 +78,5 @@ int	close_game(t_game *game)
 	// 	mlx_destroy_image(game->mlx, game->exit);
 	// mlx_destroy_window(game->mlx, game->win);
 	// exit(0);
+	return (0);
 }

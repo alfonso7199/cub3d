@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/10/30 12:32:58 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/30 18:32:58 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <string.h>	// strerror
 # include <sys/time.h>	// gettimeofday
 # include <X11/keysym.h> // KEYS
+# include <math.h>
 
 # define GREEN    "\033[32m"
 # define RESET    "\033[0m"
@@ -33,8 +34,15 @@
 # define GAME_NAME "CUB3D"
 
 // No se si es lento o rápido, habra que ver
-# define MOVE_SPEED 0.05
-# define ROT_SPEED 0.03
+# define MOVE_SPEED 0.02
+# define ROT_SPEED 0.015
+# define M_PI 3.14159265358979323846
+
+typedef enum e_bool
+{
+	FALSE = 0,
+	TRUE = 1
+}	t_bool;
 
 typedef struct s_textures
 {
@@ -46,9 +54,14 @@ typedef struct s_textures
 
 typedef struct s_colors
 {
-	int	r;
-	int	g;
-	int	b;
+	int	floor;
+	int	ceiling;
+	int	floor_r;
+	int	floor_g;
+	int	floor_b;
+	int	ceiling_r;
+	int	ceiling_g;
+	int	ceiling_b;
 }	t_colors;
 
 typedef struct s_map
@@ -59,7 +72,6 @@ typedef struct s_map
 }	t_map;
 
 //TODO: todas las structuras son básicas, es para hacernos una idea inicial y luego ir viendo que más podemos necesitar
-
 typedef struct s_vec2
 {
 	double	x;
@@ -70,7 +82,7 @@ typedef struct s_player
 {
 	t_vec2	pos;
 	t_vec2	dir;
-	t_vec2	plane; 
+	t_vec2	plane;
 }	t_player;
 
 typedef struct s_ray
@@ -103,25 +115,18 @@ typedef struct s_keys
 typedef struct s_game
 {
 	mlx_t		*mlx;
-	mlx_image_t	*frame;
+	mlx_image_t	*img;
 	t_textures	textures;
-	t_colors	floor;
-	t_colors	ceiling;
+	t_colors	colors;
 	t_map		map;
 	t_player	player;
-	t_keys			keys;
+	t_keys		keys;
 }	t_game;
 
-typedef enum	e_bool
-{
-	FALSE = 0,
-	TRUE = 1
-}	t_bool;
-
-// Init - settings
+// Init
 void	set_mlx_settings(void);
-// Init - game
 t_game	*init_game(void);
+void	init_player(t_game *game, int x, int y, char orientation);
 
 // validations - extension
 t_bool	validate_map_extension(const char *path);
@@ -129,11 +134,24 @@ t_bool	validate_map_extension(const char *path);
 // Parsing
 int		open_file(t_game *game, const char *path);
 
+// Raycasting - DDA
+void	perform_dda(t_game *game, t_ray *ray);
+void	cast_all_rays(t_game *game);
+void	render_frame(t_game *game);
+
+// Movement
+void	update_movement(t_game *game);
+void	move_player(t_game *game, double move_x, double move_y);
+void	rotate_player(t_game *game, double rot_speed);
+t_bool	is_wall(t_game *game, int x, int y);
+
 // Events
 int		handle_no_event(void *game);
 int		handle_input(int keysym, void *param);
-void	key_press(mlx_key_data_t keydata, void *param);
-void	key_release(mlx_key_data_t keydata, void *param);
+void	key_event(mlx_key_data_t keydata, void *param);
+void	key_press(t_game *game, int key);
+void	key_release(t_game *game, int key);
+void	game_loop(void *param);
 int		close_game(t_game *game);
 
 // Free

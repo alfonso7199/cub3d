@@ -32,6 +32,10 @@ SRC_FILES	= \
 	$(SRC_DIR)/inits/settings.c \
 	$(SRC_DIR)/validations/extension.c \
 	$(SRC_DIR)/parsing/parse_file.c \
+	$(SRC_DIR)/events/player_movement.c \
+	$(SRC_DIR)/events/handle_keys.c \
+	$(SRC_DIR)/engine/raycasting.c \
+	$(SRC_DIR)/engine/dda_algo.c
 
 
 OBJS        = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
