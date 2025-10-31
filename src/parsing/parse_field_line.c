@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:46:50 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 16:42:10 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 17:28:42 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 void	parse_field_line(t_game *game, char *line)
 {
-	if (!ft_strncmp(line, "NO", 2))
+	if (!ft_strncmp(line, "NO ", 3))
 		game->textures.north = ft_strdup(line + 3);
-	else if (!ft_strncmp(line, "SO", 2))
+	else if (!ft_strncmp(line, "SO ", 3))
 		game->textures.south = ft_strdup(line + 3);
-	else if (!ft_strncmp(line, "WE", 2))
+	else if (!ft_strncmp(line, "WE ", 3))
 		game->textures.west = ft_strdup(line + 3);
-	else if (!ft_strncmp(line, "EA", 2))
+	else if (!ft_strncmp(line, "EA ", 3))
 		game->textures.east = ft_strdup(line + 3);
 	else if (line[0] == 'F' && line[1] == ' ')
 		parse_color(&game->colors, line + 2, true);
 	else if (line[0] == 'C' && line[1] == ' ')
 		parse_color(&game->colors, line + 2, false);
 }
-
-// Code: parse_color

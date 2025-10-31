@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:58:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 15:09:10 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 17:28:47 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,3 @@ void	parse_map_line(t_game *game, char *line)
 	}
 	game->map.grid = ft_append_line(game->map.grid, line);
 }
-
-// Code: ft_append_line 
