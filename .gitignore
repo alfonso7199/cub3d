@@ -4,6 +4,7 @@ Libft/.git
 .vscode/*
 vscode/*
 
+.cache/*
 obj/*
 libft/*.o
 libft/libft.a
