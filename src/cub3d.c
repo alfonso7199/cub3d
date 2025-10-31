@@ -44,14 +44,14 @@ int	main(int argc, char *argv[])
 	if (!game.mlx)
 		return (ft_error(), EXIT_FAILURE);
 
-	game.frame = mlx_new_image(game.mlx, WIN_WIDTH, WIN_HEIGHT);
-	if (!game.frame || (mlx_image_to_window(game.mlx, game.frame, 0, 0) < 0))
+	game.img = mlx_new_image(game.mlx, WIN_WIDTH, WIN_HEIGHT);
+	if (!game.img || (mlx_image_to_window(game.mlx, game.img, 0, 0) < 0))
 		return (ft_error(), EXIT_FAILURE);
 	open_file(&game, argv[1]);
-	mlx_put_pixel(game.frame, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFFFF); 
+	mlx_put_pixel(game.img, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFFFF); 
 	mlx_loop_hook(game.mlx, ft_hook, game.mlx);
 	mlx_loop(game.mlx);
-	mlx_delete_image(game.mlx, game.frame);
+	mlx_delete_image(game.mlx, game.img);
 	mlx_terminate(game.mlx);
 	return (EXIT_SUCCESS);
 }
