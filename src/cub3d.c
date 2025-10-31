@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/30 12:33:09 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 19:07:27 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char *argv[])
 	if (!validate_map_extension(argv[1]))
 		return (EXIT_FAILURE);
 	set_mlx_settings();
-
+	ft_bzero(&game, sizeof(t_game));
 	game.mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, false);
 	if (!game.mlx)
 		return (ft_error(), EXIT_FAILURE);

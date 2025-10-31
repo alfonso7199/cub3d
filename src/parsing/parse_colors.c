@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:52:18 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 16:59:37 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 19:14:06 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,8 @@
 
 static int	parse_component(char *str)
 {
-	int	i;
 	int	n;
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '\n')
-			str[i] = '\0';
-		i++;
-	}
 	n = ft_atoi(str);
 	if (n < 0 || n > 255)
 	{
@@ -36,11 +28,16 @@ static int	parse_component(char *str)
 void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 {
 	char	**split;
+	char	*trimmed;
 	int		r;
 	int		g;
 	int		b;
 
-	split = ft_split(line, ',');
+	trimmed = ft_strtrim(line, " \n\r\t");
+	if (!trimmed)
+		return ;
+	split = ft_split(trimmed, ',');
+	free(trimmed);
 	if (!split || !split[0] || !split[1] || !split[2])
 	{
 		ft_putendl_fd("Error: invalid color format", STDOUT_FILENO);
@@ -55,3 +52,11 @@ void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 		colors->ceiling = (r << 16) | (g << 8) | b;
 	ft_free_split(split);
 }
+
+// floor:		11011100 01100100 00000000
+//				220			100		0
+// ceiling:		11100001 00011110 00000000
+//				225			30		0
+
+// F 220,100,0
+// C 225,30,0
