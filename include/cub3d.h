@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/10/30 18:32:58 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 15:16:04 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,9 @@ t_bool	validate_map_extension(const char *path);
 
 // Parsing
 int		open_file(t_game *game, const char *path);
+void	parse_map_line(t_game *game, char *line);
+void	parse_field_line(t_game *game, char *line);
+void	parse_color(t_colors *colors, char *line, t_bool is_floor);
 
 // Raycasting - DDA
 void	perform_dda(t_game *game, t_ray *ray);
@@ -156,5 +159,10 @@ int		close_game(t_game *game);
 
 // Free
 void	ft_free(t_game *game);
+
+// Utils
+int		ft_isspace(int c);
+char	**ft_append_line(char **old, char *new_line);
+void	ft_free_split(char **split);
 
 #endif

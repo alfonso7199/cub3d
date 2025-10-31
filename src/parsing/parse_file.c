@@ -3,43 +3,50 @@
 /*                                                        :::      ::::::::   */
 /*   parse_file.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:54:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/30 12:31:17 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/10/31 15:07:28 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/cub3d.h"
+#include "../../include/cub3d.h"
 
-void	find_field(t_game *game, char *line)
+static t_bool	is_map_line(char *line)
 {
-	if (line[0] == 'N' && line[1] == 'O')
-		game->textures.north = line;
-	else if (line[0] == 'S' && line[1] == 'O')
-		game->textures.south = line;
-	else if (line[0] == 'W' && line[1] == 'E')
-		game->textures.west = line;
-	else if (line[0] == 'E' && line[1] == 'A')
-		game->textures.east = line;
-	else
-		write(1, line, sizeof(line));
+	int	i;
+
+	i = 0;
+	while (line[i] && ft_isspace(line[i]))
+		i++;
+	if (line[i] == '1' || line[i] == '0')
+		return (true);
+	return (false);
 }
 
 int	open_file(t_game *game, const char *path)
 {
-	int	fd;
+	int		fd;
 	char	*line;
+	t_bool	in_map;
+
+	in_map = false;
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
-		return (0);
-	while ((line = get_next_line(fd)))
-		find_field(game, line);
+		return (ft_putendl_fd("Error: cannot open file", STDOUT_FILENO),
+			false);
+	line = get_next_line(fd);
+	while (line)
+	{
+		if (!in_map && is_map_line(line))
+			in_map = true;
+		if (in_map)
+			parse_map_line(game, line);
+		else
+			parse_field_line(game, line);
+		free(line);
+		line = get_next_line(fd);
+	}
 	close(fd);
-	printf("%s\n", game->textures.north);
-	printf("%s\n", game->textures.south);
-	printf("%s\n", game->textures.west);
-	printf("%s\n", game->textures.east);
 	return (1);
 }
-
