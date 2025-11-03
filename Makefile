@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/10/31 16:39:57 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/03 17:35:48 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,21 +28,27 @@ SRC_DIR		= ./src
 OBJ_DIR		= obj
 
 SRC_FILES	= \
-    $(SRC_DIR)/cub3d.c \
+	$(SRC_DIR)/cub3d.c \
+	$(SRC_DIR)/engine/dda_algo.c \
+	$(SRC_DIR)/engine/raycasting.c \
+	$(SRC_DIR)/events/event.c \
+	$(SRC_DIR)/events/handle_keys.c \
+	$(SRC_DIR)/events/player_movement.c \
+	$(SRC_DIR)/frees/free.c \
+	$(SRC_DIR)/inits/game.c \
 	$(SRC_DIR)/inits/settings.c \
-	$(SRC_DIR)/validations/extension.c \
-	$(SRC_DIR)/validations/map_check.c \
 	$(SRC_DIR)/parsing/parse_colors.c \
 	$(SRC_DIR)/parsing/parse_field_line.c \
 	$(SRC_DIR)/parsing/parse_file.c \
+	$(SRC_DIR)/parsing/parse_map_2.c \
 	$(SRC_DIR)/parsing/parse_map.c \
-	$(SRC_DIR)/events/handle_keys.c \
-	$(SRC_DIR)/engine/raycasting.c \
-	$(SRC_DIR)/engine/dda_algo.c \
 	$(SRC_DIR)/utils/ft_append_line.c \
 	$(SRC_DIR)/utils/ft_free_split.c \
 	$(SRC_DIR)/utils/ft_isspace.c \
-# 	$(SRC_DIR)/events/player_movement.c \
+	$(SRC_DIR)/validations/extension.c \
+	$(SRC_DIR)/validations/map_check.c
+# 	$(SRC_DIR)/events/player_movement.c
+
 
 
 OBJS        = $(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)

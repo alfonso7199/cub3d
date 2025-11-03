@@ -6,23 +6,46 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:52:18 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 19:14:06 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:06:34 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
 
-static int	parse_component(char *str)
+static int	parse_component(char *component)
 {
-	int	n;
+	char	*trimmed_component;
+	int		value;
 
-	n = ft_atoi(str);
-	if (n < 0 || n > 255)
+	trimmed_component = ft_strtrim(component, " \t\r\n");
+	if (!trimmed_component)
+		exit(EXIT_FAILURE);
+	value = ft_atoi(trimmed_component);
+	free(trimmed_component);
+	if (value < 0 || value > 255)
 	{
-		ft_putendl_fd("Error: invalid RGB value", STDOUT_FILENO);
+		ft_putendl_fd("Error: invalid RGB value", STDERR_FILENO);
 		exit(EXIT_FAILURE);
 	}
-	return (n);
+	return (value);
+}
+
+static void	store_color_values(t_colors *colors, int r, int g, int b, t_bool is_floor)
+{
+	if (is_floor)
+	{
+		colors->floor_r = r;
+		colors->floor_g = g;
+		colors->floor_b = b;
+		colors->floor = (r << 16) | (g << 8) | b;
+	}
+	else
+	{
+		colors->ceiling_r = r;
+		colors->ceiling_g = g;
+		colors->ceiling_b = b;
+		colors->ceiling = (r << 16) | (g << 8) | b;
+	}
 }
 
 void	parse_color(t_colors *colors, char *line, t_bool is_floor)
@@ -46,11 +69,8 @@ void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 	r = parse_component(split[0]);
 	g = parse_component(split[1]);
 	b = parse_component(split[2]);
-	if (is_floor)
-		colors->floor = (r << 16) | (g << 8) | b;
-	else
-		colors->ceiling = (r << 16) | (g << 8) | b;
 	ft_free_split(split);
+	store_color_values(colors, r, g, b, is_floor);
 }
 
 // floor:		11011100 01100100 00000000

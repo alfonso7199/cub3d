@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 12:26:43 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 17:33:03 by rzt              ###   ########.fr       */
+/*   Updated: 2025/11/03 17:44:53 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ t_game *init_game(void)
 		free(game);
 		return (NULL);
 	}
-	game->frame = mlx_new_image(game->mlx, WIN_WIDTH, WIN_HEIGHT);
-	if (!game->frame)
+	game->img = mlx_new_image(game->mlx, WIN_WIDTH, WIN_HEIGHT);
+	if (!game->img)
 	{
 		mlx_terminate(game->mlx);
 		free(game);

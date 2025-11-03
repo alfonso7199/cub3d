@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzt <rzt@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 12:29:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/07/28 17:32:43 by rzt              ###   ########.fr       */
+/*   Updated: 2025/11/03 17:41:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	ft_free(t_game *game)
 {
-	void	*mlx_ptr;
-
-	mlx_ptr = NULL;
 	if (!game)
 		return ;
-	if (game->window)
-	{
-		mlx_ptr = game->window->mlx_ptr;
-		if (game->window->win_ptr)
-			mlx_destroy_window(game->window->mlx_ptr, game->window->win_ptr);
-		free(game->window);
-		game->window = NULL;
-		if (mlx_ptr)
-			mlx_destroy_display(mlx_ptr);
-	}
-	free(game);
+	if (game->textures.north)
+		free(game->textures.north);
+	if (game->textures.south)
+		free(game->textures.south);
+	if (game->textures.east)
+		free(game->textures.east);
+	if (game->textures.west)
+		free(game->textures.west);
+	if (game->map.grid)
+		ft_free_split(game->map.grid);
+	if (game->img)
+		mlx_delete_image(game->mlx, game->img);
+	if (game->mlx)
+		mlx_terminate(game->mlx);
 }

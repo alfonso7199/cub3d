@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/10/31 15:16:04 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:30:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,16 @@ typedef struct s_textures
 
 typedef struct s_colors
 {
-	int	floor;
-	int	ceiling;
-	int	floor_r;
-	int	floor_g;
-	int	floor_b;
-	int	ceiling_r;
-	int	ceiling_g;
-	int	ceiling_b;
+	int		floor;
+	int		ceiling;
+	int		floor_r;
+	int		floor_g;
+	int		floor_b;
+	int		ceiling_r;
+	int		ceiling_g;
+	int		ceiling_b;
+	t_bool	floor_set;
+	t_bool	ceiling_set;
 }	t_colors;
 
 typedef struct s_map
@@ -136,6 +138,8 @@ int		open_file(t_game *game, const char *path);
 void	parse_map_line(t_game *game, char *line);
 void	parse_field_line(t_game *game, char *line);
 void	parse_color(t_colors *colors, char *line, t_bool is_floor);
+t_bool	is_map_closed(t_map *map);
+void	finalize_map(t_game *game);
 
 // Raycasting - DDA
 void	perform_dda(t_game *game, t_ray *ray);
