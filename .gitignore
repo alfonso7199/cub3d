@@ -9,5 +9,5 @@ obj/*
 libft/*.o
 libft/libft.a
 
-cub3d
+cub3D
 *.txt

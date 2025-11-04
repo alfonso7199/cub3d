@@ -26,6 +26,23 @@ static void	ft_hook(void *param)
 	(void)mlx;
 }
 
+void	check_parse(t_game game)
+{
+	printf("North: %s\n", game.textures.north);
+	printf("South: %s\n", game.textures.south);
+	printf("East: %s\n", game.textures.east);
+	printf("West: %s\n", game.textures.west);
+	printf("Floor Color:\t R -> %d | G -> %d | B -> %d\n", game.colors.floor_r
+		, game.colors.floor_g
+		, game.colors.floor_b);
+	printf("Ceiling Color:\t R -> %d | G -> %d | B -> %d\n", game.colors.ceiling_r
+		, game.colors.ceiling_g
+		, game.colors.ceiling_b);
+	printf("Map Grid:\t Width -> %d | Height -> %d\n", game.map.width
+		, game.map.height);
+}
+
+
 int	main(int argc, char *argv[])
 {
 	t_game	game;
@@ -50,6 +67,7 @@ int	main(int argc, char *argv[])
 	open_file(&game, argv[1]);
 	mlx_put_pixel(game.img, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFFFF); 
 	mlx_loop_hook(game.mlx, ft_hook, game.mlx);
+	check_parse(game);
 	mlx_loop(game.mlx);
 	mlx_delete_image(game.mlx, game.img);
 	mlx_terminate(game.mlx);

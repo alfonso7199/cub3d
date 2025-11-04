@@ -74,14 +74,6 @@ static char	*expand_tabs(char *line)
 	return (new);
 }
 
-/*
-void	parse_map_line(t_game *game, char *line)
-{
-	validate_map_line_characters(line);
-	game->map.grid = ft_append_line(game->map.grid, line);
-}
-*/
-
 void	parse_map_line(t_game *game, char *line)
 {
 	char	*expanded;

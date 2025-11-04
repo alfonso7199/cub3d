@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= cub3d
+NAME		= cub3D
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -g
 RM			= rm -rf
@@ -89,12 +89,12 @@ keycap:
 	@cc src/mlx42_test.c mlx/libmlx42.a $(MLX_FLAGS) -o keycapture
 
 run:	re
-	@	@./cub3d assets/maps/cheese_maze.cub
-	@	@./cub3d assets/maps/creepy.cub
-	@	@./cub3d assets/maps/dungeon.cub
-	@	@./cub3d assets/maps/library.cub
-	@	@./cub3d assets/maps/sad_face.cub
-	@	@./cub3d assets/maps/sample_map.cub
+	@	@./$(NAME) assets/maps/cheese_maze.cub
+	@	@./$(NAME) assets/maps/creepy.cub
+	@	@./$(NAME) assets/maps/dungeon.cub
+	@	@./$(NAME) assets/maps/library.cub
+	@	@./$(NAME) assets/maps/sad_face.cub
+	@	@./$(NAME) assets/maps/sample_map.cub
 
 .PHONY: all clean fclean re
 
