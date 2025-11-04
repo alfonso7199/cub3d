@@ -10,9 +10,9 @@
       "ft_atoi.o",
       "ft_atoi.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_atoi.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_atoi.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_atoi.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_atoi.o"
   },
   {
     "arguments": [
@@ -25,9 +25,9 @@
       "ft_bzero.o",
       "ft_bzero.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_bzero.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_bzero.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_bzero.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_bzero.o"
   },
   {
     "arguments": [
@@ -40,9 +40,9 @@
       "ft_calloc.o",
       "ft_calloc.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_calloc.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_calloc.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_calloc.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_calloc.o"
   },
   {
     "arguments": [
@@ -55,9 +55,9 @@
       "ft_isalnum.o",
       "ft_isalnum.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_isalnum.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_isalnum.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isalnum.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isalnum.o"
   },
   {
     "arguments": [
@@ -70,9 +70,9 @@
       "ft_isalpha.o",
       "ft_isalpha.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_isalpha.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_isalpha.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isalpha.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isalpha.o"
   },
   {
     "arguments": [
@@ -85,9 +85,9 @@
       "ft_isascii.o",
       "ft_isascii.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_isascii.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_isascii.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isascii.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isascii.o"
   },
   {
     "arguments": [
@@ -100,9 +100,9 @@
       "ft_isdigit.o",
       "ft_isdigit.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_isdigit.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_isdigit.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isdigit.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isdigit.o"
   },
   {
     "arguments": [
@@ -115,9 +115,9 @@
       "ft_isprint.o",
       "ft_isprint.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_isprint.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_isprint.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isprint.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_isprint.o"
   },
   {
     "arguments": [
@@ -130,9 +130,9 @@
       "ft_itoa.o",
       "ft_itoa.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_itoa.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_itoa.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_itoa.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_itoa.o"
   },
   {
     "arguments": [
@@ -145,9 +145,9 @@
       "ft_memchr.o",
       "ft_memchr.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_memchr.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_memchr.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memchr.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memchr.o"
   },
   {
     "arguments": [
@@ -160,9 +160,9 @@
       "ft_memcmp.o",
       "ft_memcmp.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_memcmp.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_memcmp.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memcmp.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memcmp.o"
   },
   {
     "arguments": [
@@ -175,9 +175,9 @@
       "ft_memcpy.o",
       "ft_memcpy.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_memcpy.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_memcpy.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memcpy.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memcpy.o"
   },
   {
     "arguments": [
@@ -190,9 +190,9 @@
       "ft_memmove.o",
       "ft_memmove.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_memmove.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_memmove.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memmove.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memmove.o"
   },
   {
     "arguments": [
@@ -205,9 +205,9 @@
       "ft_memset.o",
       "ft_memset.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_memset.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_memset.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memset.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_memset.o"
   },
   {
     "arguments": [
@@ -220,9 +220,9 @@
       "ft_putchar_fd.o",
       "ft_putchar_fd.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_putchar_fd.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_putchar_fd.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putchar_fd.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putchar_fd.o"
   },
   {
     "arguments": [
@@ -235,9 +235,9 @@
       "ft_putendl_fd.o",
       "ft_putendl_fd.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_putendl_fd.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_putendl_fd.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putendl_fd.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putendl_fd.o"
   },
   {
     "arguments": [
@@ -250,9 +250,9 @@
       "ft_putnbr_fd.o",
       "ft_putnbr_fd.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_putnbr_fd.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_putnbr_fd.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putnbr_fd.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putnbr_fd.o"
   },
   {
     "arguments": [
@@ -265,9 +265,9 @@
       "ft_putstr_fd.o",
       "ft_putstr_fd.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_putstr_fd.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_putstr_fd.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putstr_fd.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_putstr_fd.o"
   },
   {
     "arguments": [
@@ -280,9 +280,9 @@
       "ft_split.o",
       "ft_split.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_split.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_split.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_split.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_split.o"
   },
   {
     "arguments": [
@@ -295,9 +295,9 @@
       "ft_strchr.o",
       "ft_strchr.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strchr.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strchr.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strchr.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strchr.o"
   },
   {
     "arguments": [
@@ -310,9 +310,9 @@
       "ft_strdup.o",
       "ft_strdup.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strdup.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strdup.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strdup.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strdup.o"
   },
   {
     "arguments": [
@@ -325,9 +325,9 @@
       "ft_striteri.o",
       "ft_striteri.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_striteri.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_striteri.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_striteri.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_striteri.o"
   },
   {
     "arguments": [
@@ -340,9 +340,9 @@
       "ft_strjoin.o",
       "ft_strjoin.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strjoin.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strjoin.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strjoin.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strjoin.o"
   },
   {
     "arguments": [
@@ -355,9 +355,9 @@
       "ft_strlcat.o",
       "ft_strlcat.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strlcat.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strlcat.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strlcat.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strlcat.o"
   },
   {
     "arguments": [
@@ -370,9 +370,9 @@
       "ft_strlcpy.o",
       "ft_strlcpy.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strlcpy.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strlcpy.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strlcpy.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strlcpy.o"
   },
   {
     "arguments": [
@@ -385,9 +385,9 @@
       "ft_strlen.o",
       "ft_strlen.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strlen.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strlen.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strlen.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strlen.o"
   },
   {
     "arguments": [
@@ -400,9 +400,9 @@
       "ft_strmapi.o",
       "ft_strmapi.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strmapi.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strmapi.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strmapi.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strmapi.o"
   },
   {
     "arguments": [
@@ -415,9 +415,9 @@
       "ft_strncmp.o",
       "ft_strncmp.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strncmp.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strncmp.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strncmp.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strncmp.o"
   },
   {
     "arguments": [
@@ -430,9 +430,9 @@
       "ft_strnstr.o",
       "ft_strnstr.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strnstr.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strnstr.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strnstr.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strnstr.o"
   },
   {
     "arguments": [
@@ -445,9 +445,9 @@
       "ft_strrchr.o",
       "ft_strrchr.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strrchr.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strrchr.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strrchr.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strrchr.o"
   },
   {
     "arguments": [
@@ -460,9 +460,9 @@
       "ft_strtrim.o",
       "ft_strtrim.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_strtrim.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_strtrim.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strtrim.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_strtrim.o"
   },
   {
     "arguments": [
@@ -475,9 +475,9 @@
       "ft_substr.o",
       "ft_substr.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_substr.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_substr.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_substr.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_substr.o"
   },
   {
     "arguments": [
@@ -490,9 +490,9 @@
       "ft_tolower.o",
       "ft_tolower.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_tolower.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_tolower.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_tolower.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_tolower.o"
   },
   {
     "arguments": [
@@ -505,9 +505,9 @@
       "ft_toupper.o",
       "ft_toupper.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/ft_toupper.c",
-    "output": "/home/rzt/Work/cub3d/libft/ft_toupper.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_toupper.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/ft_toupper.o"
   },
   {
     "arguments": [
@@ -520,9 +520,9 @@
       "get_next_line.o",
       "get_next_line.c"
     ],
-    "directory": "/home/rzt/Work/cub3d/libft",
-    "file": "/home/rzt/Work/cub3d/libft/get_next_line.c",
-    "output": "/home/rzt/Work/cub3d/libft/get_next_line.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d/libft",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/libft/get_next_line.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/libft/get_next_line.o"
   },
   {
     "arguments": [
@@ -538,9 +538,135 @@
       "obj/cub3d.o",
       "src/cub3d.c"
     ],
-    "directory": "/home/rzt/Work/cub3d",
-    "file": "/home/rzt/Work/cub3d/src/cub3d.c",
-    "output": "/home/rzt/Work/cub3d/obj/cub3d.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/cub3d.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/cub3d.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/engine/dda_algo.o",
+      "src/engine/dda_algo.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/engine/dda_algo.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/engine/dda_algo.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/engine/raycasting.o",
+      "src/engine/raycasting.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/engine/raycasting.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/engine/raycasting.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/events/event.o",
+      "src/events/event.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/events/event.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/events/event.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/events/handle_keys.o",
+      "src/events/handle_keys.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/events/handle_keys.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/events/handle_keys.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/events/player_movement.o",
+      "src/events/player_movement.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/events/player_movement.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/events/player_movement.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/frees/free.o",
+      "src/frees/free.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/frees/free.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/frees/free.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/inits/game.o",
+      "src/inits/game.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/inits/game.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/inits/game.o"
   },
   {
     "arguments": [
@@ -556,9 +682,153 @@
       "obj/inits/settings.o",
       "src/inits/settings.c"
     ],
-    "directory": "/home/rzt/Work/cub3d",
-    "file": "/home/rzt/Work/cub3d/src/inits/settings.c",
-    "output": "/home/rzt/Work/cub3d/obj/inits/settings.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/inits/settings.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/inits/settings.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/parsing/parse_colors.o",
+      "src/parsing/parse_colors.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/parsing/parse_colors.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/parsing/parse_colors.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/parsing/parse_field_line.o",
+      "src/parsing/parse_field_line.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/parsing/parse_field_line.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/parsing/parse_field_line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/parsing/parse_file.o",
+      "src/parsing/parse_file.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/parsing/parse_file.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/parsing/parse_file.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/parsing/parse_map_2.o",
+      "src/parsing/parse_map_2.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/parsing/parse_map_2.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/parsing/parse_map_2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/parsing/parse_map.o",
+      "src/parsing/parse_map.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/parsing/parse_map.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/parsing/parse_map.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/utils/ft_append_line.o",
+      "src/utils/ft_append_line.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/utils/ft_append_line.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/utils/ft_append_line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/utils/ft_free_split.o",
+      "src/utils/ft_free_split.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/utils/ft_free_split.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/utils/ft_free_split.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/utils/ft_isspace.o",
+      "src/utils/ft_isspace.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/utils/ft_isspace.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/utils/ft_isspace.o"
   },
   {
     "arguments": [
@@ -574,8 +844,26 @@
       "obj/validations/extension.o",
       "src/validations/extension.c"
     ],
-    "directory": "/home/rzt/Work/cub3d",
-    "file": "/home/rzt/Work/cub3d/src/validations/extension.c",
-    "output": "/home/rzt/Work/cub3d/obj/validations/extension.o"
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/validations/extension.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/validations/extension.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/validations/map_check.o",
+      "src/validations/map_check.c"
+    ],
+    "directory": "/home/rzt/Documents/Studies/42/cub3d",
+    "file": "/home/rzt/Documents/Studies/42/cub3d/src/validations/map_check.c",
+    "output": "/home/rzt/Documents/Studies/42/cub3d/obj/validations/map_check.o"
   }
 ]
