@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/04 11:28:49 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/04 11:40:09 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,12 @@ keycap:
 	@cc src/mlx42_test.c mlx/libmlx42.a $(MLX_FLAGS) -o keycapture
 
 run:	re
-	@./cub3d assets/maps/sample_map.cub
+	@	@./cub3d assets/maps/cheese_maze.cub
+	@	@./cub3d assets/maps/creepy.cub
+	@	@./cub3d assets/maps/dungeon.cub
+	@	@./cub3d assets/maps/library.cub
+	@	@./cub3d assets/maps/sad_face.cub
+	@	@./cub3d assets/maps/sample_map.cub
 
 .PHONY: all clean fclean re
 
