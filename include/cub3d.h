@@ -141,10 +141,12 @@ void	parse_color(t_colors *colors, char *line, t_bool is_floor);
 t_bool	is_map_closed(t_map *map);
 void	finalize_map(t_game *game);
 
-// Raycasting - DDA
-void	perform_dda(t_game *game, t_ray *ray);
-void	cast_all_rays(t_game *game);
-void	render_frame(t_game *game);
+// DDA
+void	init_dda(t_ray *ray, t_player *player);
+int		hit_wall(t_game *game, t_ray *ray);
+void	dda_loop(t_ray *ray);
+void	perpendicular_dist(t_ray *ray);
+void	dda(t_game *game, t_ray *ray);
 
 // Movement
 void	update_movement(t_game *game);
