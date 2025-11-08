@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:58:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/04 11:28:18 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/08 09:50:23 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static char	*expand_tabs(char *line)
 			while (k++ < 4)
 				new[j++] = ' ';
 		else
-		 	new[j++] = line[i];
+			new[j++] = line[i];
 		i++;
 	}
 	new[j] = '\0';
@@ -77,9 +77,9 @@ static char	*expand_tabs(char *line)
 void	parse_map_line(t_game *game, char *line)
 {
 	char	*expanded;
-	
+
 	expanded = expand_tabs(line);
 	validate_map_line_characters(expanded);
 	game->map.grid = ft_append_line(game->map.grid, expanded);
-	free(expanded);	
+	free(expanded);
 }

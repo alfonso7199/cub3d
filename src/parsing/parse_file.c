@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:54:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/03 15:59:27 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/08 09:50:39 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void	read_all_lines_and_parse(int fd, t_game *game)
 		if (in_map_section)
 			parse_map_line(game, line);
 		else
-		 	parse_field_line(game, line);
+			parse_field_line(game, line);
 		free(line);
 		line = get_next_line(fd);
 	}

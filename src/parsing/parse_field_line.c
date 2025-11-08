@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:46:50 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/03 15:36:44 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/08 09:50:56 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	assign_color(t_colors *colors, char *line, t_bool is_floor)
 	if (is_floor)
 		colors->floor_set = true;
 	else
-	 	colors->ceiling_set = true;
+		colors->ceiling_set = true;
 }
 
 void	parse_field_line(t_game *game, char *line)

@@ -6,17 +6,17 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 12:26:43 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/03 17:44:53 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/08 09:52:30 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/cub3d.h"
 
-t_game *init_game(void)
+t_game	*init_game(void)
 {
-	t_game *game;
+	t_game	*game;
 
-	game = malloc(sizeof *game);
+	game = malloc(sizeof(*game));
 	if (!game)
 		return (NULL);
 	game->mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, true);

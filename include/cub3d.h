@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/04 11:29:03 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/08 09:46:51 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,20 +132,21 @@ void	init_player(t_game *game, int x, int y, char orientation);
 
 // validations - extension
 t_bool	validate_map_extension(const char *path);
+t_bool	is_map_closed(t_map *map);
 
 // Parsing
 int		open_file(t_game *game, const char *path);
 void	parse_map_line(t_game *game, char *line);
 void	parse_field_line(t_game *game, char *line);
 void	parse_color(t_colors *colors, char *line, t_bool is_floor);
-t_bool	is_map_closed(t_map *map);
+void	normalize_map_with_spaces(t_map *map);
 void	finalize_map(t_game *game);
 
 // DDA
 void	init_dda(t_ray *ray, t_player *player);
 int		hit_wall(t_game *game, t_ray *ray);
 void	dda_loop(t_ray *ray);
-void	perpendicular_dist(t_ray *ray);
+// void	perpendicular_dist(t_ray *ray);
 void	dda(t_game *game, t_ray *ray);
 
 // Movement
