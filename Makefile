@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/04 11:40:09 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/08 10:15:16 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC_FILES	= \
 	$(SRC_DIR)/parsing/parse_colors.c \
 	$(SRC_DIR)/parsing/parse_field_line.c \
 	$(SRC_DIR)/parsing/parse_file.c \
+	$(SRC_DIR)/parsing/parse_map_3.c \
 	$(SRC_DIR)/parsing/parse_map_2.c \
 	$(SRC_DIR)/parsing/parse_map.c \
 	$(SRC_DIR)/utils/ft_append_line.c \
