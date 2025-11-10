@@ -66,7 +66,7 @@ int	close_game(t_game *game)
 	if (game->keys.esc)
 	{
 		mlx_close_window(game->mlx);
-		return (0);
+		return (1);
 	}
 	return (0);
 }

@@ -44,6 +44,14 @@ typedef enum e_bool
 	TRUE = 1
 }	t_bool;
 
+typedef struct s_texture_set
+{
+    mlx_texture_t	*north;
+    mlx_texture_t	*south;
+    mlx_texture_t	*east;
+    mlx_texture_t	*west;
+}	t_texture_set;
+
 typedef struct s_textures
 {
 	char	*north;
@@ -119,6 +127,7 @@ typedef struct s_game
 	mlx_t		*mlx;
 	mlx_image_t	*img;
 	t_textures	textures;
+	t_texture_set	tex_set;
 	t_colors	colors;
 	t_map		map;
 	t_player	player;
@@ -146,8 +155,15 @@ void	finalize_map(t_game *game);
 void	init_dda(t_ray *ray, t_player *player);
 int		hit_wall(t_game *game, t_ray *ray);
 void	dda_loop(t_ray *ray);
-// void	perpendicular_dist(t_ray *ray);
+void	perpendicular_dist(t_ray *ray);
 void	dda(t_game *game, t_ray *ray);
+
+//Raycasting
+void	render_frame(t_game *game);
+void	cast_rays(t_game *game);
+void	calculate_ray_dir(t_ray *ray, t_player *player, int x);
+void	calculate_height(t_ray *ray);
+void	draw_vertical_line(t_game *game, t_ray *ray, int x);
 
 // Movement
 void	update_movement(t_game *game);

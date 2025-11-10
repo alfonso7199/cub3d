@@ -67,7 +67,7 @@ void	dda_loop(t_ray *ray)
 	}
 }
 
-static void	perpendicular_dist(t_ray *ray)
+void	perpendicular_dist(t_ray *ray)
 {
 	if (ray->side == 0)
 		ray->perp_wall_dist = (ray->side_dist.x - ray->delta_dist.x);
