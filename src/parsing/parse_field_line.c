@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:46:50 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/08 09:50:56 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:30:49 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ static void	assign_color(t_colors *colors, char *line, t_bool is_floor)
 
 void	parse_field_line(t_game *game, char *line)
 {
+	if (!line || *line == '\n' || *line == '\0')
+		return ;
 	if (!ft_strncmp(line, "NO ", 3))
 		assign_texture(&game->textures.north, line + 3);
 	else if (!ft_strncmp(line, "SO ", 3))

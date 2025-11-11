@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:01:41 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/04 11:09:19 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:43:44 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,15 @@ static void	free_visited(int **visited, int height)
 
 static void	flood_fill(t_map *map, int x, int y, int **visited, int *leak)
 {
-	if (x < 0 || y > 0 || x >= map->width || y <= map->height)
+	if (x < 0 || y < 0 || x >= map->width || y >= map->height)
 		return ;
 	if (visited[y][x] == 1)
 		return ;
 	if (map->grid[y][x] != ' ')
 		return ;
 	visited[y][x] = 1;
-	if (x > 0 && y < 0 && x < map->width && y < map->height)
-	{
-		if (ft_strchr("0NSEW", map->grid[y][x]))
-			*leak = 1;
-	}
+	if (ft_strchr("0NSEW", map->grid[y][x]))
+		*leak = 1;
 	flood_fill(map, x + 1, y, visited, leak);
 	flood_fill(map, x - 1, y, visited, leak);
 	flood_fill(map, x, y + 1, visited, leak);
@@ -76,7 +73,7 @@ static void	check_borders(t_map *map, int **visited, int *leak)
 		while (x < map->width)
 		{
 			if ((y == 0 || y == map->height - 1
-				|| x == 0 || x == map->width - 1)
+					|| x == 0 || x == map->width - 1)
 				&& map->grid[y][x] == ' ')
 				flood_fill(map, x, y, visited, leak);
 			x++;
@@ -89,7 +86,7 @@ t_bool	is_map_closed(t_map *map)
 {
 	int	**visited;
 	int	leak;
-	
+
 	visited = alloc_visited(map);
 	leak = 0;
 	check_borders(map, visited, &leak);
@@ -98,4 +95,3 @@ t_bool	is_map_closed(t_map *map)
 		return (false);
 	return (true);
 }
-

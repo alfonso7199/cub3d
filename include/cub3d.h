@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/08 09:46:51 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:14:57 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,6 @@ int		handle_input(int keysym, void *param);
 void	key_event(mlx_key_data_t keydata, void *param);
 void	key_press(t_game *game, int key);
 void	key_release(t_game *game, int key);
-void	game_loop(void *param);
 int		close_game(t_game *game);
 
 // Free

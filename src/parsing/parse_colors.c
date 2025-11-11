@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:52:18 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/03 17:06:34 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:02:25 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,22 @@ static int	parse_component(char *component)
 	return (value);
 }
 
-static void	store_color_values(t_colors *colors, int r, int g, int b, t_bool is_floor)
+static void	set_floor_color(t_colors *color, int r, int g, int b)
 {
-	if (is_floor)
-	{
-		colors->floor_r = r;
-		colors->floor_g = g;
-		colors->floor_b = b;
-		colors->floor = (r << 16) | (g << 8) | b;
-	}
-	else
-	{
-		colors->ceiling_r = r;
-		colors->ceiling_g = g;
-		colors->ceiling_b = b;
-		colors->ceiling = (r << 16) | (g << 8) | b;
-	}
+	color->floor_r = r;
+	color->floor_g = g;
+	color->floor_b = b;
+	color->floor = (0xFF << 24) | (r << 16) | (g << 8) | (b);
+	color->floor_set = true;
+}
+
+static void	set_ceiling_color(t_colors *color, int r, int g, int b)
+{
+	color->ceiling_r = r;
+	color->ceiling_g = g;
+	color->ceiling_b = b;
+	color->ceiling = (0xFF << 24) | (r << 16) | (g << 8) | (b);
+	color->ceiling_set = true;
 }
 
 void	parse_color(t_colors *colors, char *line, t_bool is_floor)
@@ -70,7 +70,10 @@ void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 	g = parse_component(split[1]);
 	b = parse_component(split[2]);
 	ft_free_split(split);
-	store_color_values(colors, r, g, b, is_floor);
+	if (is_floor)
+		set_floor_color(colors, r, g, b);
+	else
+		set_ceiling_color(colors, r, g, b);
 }
 
 // floor:		11011100 01100100 00000000
