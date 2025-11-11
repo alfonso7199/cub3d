@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:14:26 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:29:38 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	main(int argc, char *argv[])
 	open_file(&game, argv[1]);
 	mlx_loop_hook(game.mlx, &game_loop, &game);
 	mlx_loop(game.mlx);
-	ft_free(&game);
 	mlx_terminate(game.mlx);
+	ft_free(&game);
 	return (EXIT_SUCCESS);
 }

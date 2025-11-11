@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:01:41 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 15:43:44 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:32:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,21 +44,21 @@ static void	free_visited(int **visited, int height)
 	free(visited);
 }
 
-static void	flood_fill(t_map *map, int x, int y, int **visited, int *leak)
+static void	flood_fill(t_map *map, int x, int y, t_fillctx *ctx)
 {
 	if (x < 0 || y < 0 || x >= map->width || y >= map->height)
 		return ;
-	if (visited[y][x] == 1)
+	if (ctx->visited[y][x] == 1)
 		return ;
 	if (map->grid[y][x] != ' ')
 		return ;
-	visited[y][x] = 1;
+	ctx->visited[y][x] = 1;
 	if (ft_strchr("0NSEW", map->grid[y][x]))
-		*leak = 1;
-	flood_fill(map, x + 1, y, visited, leak);
-	flood_fill(map, x - 1, y, visited, leak);
-	flood_fill(map, x, y + 1, visited, leak);
-	flood_fill(map, x, y - 1, visited, leak);
+		ctx->leak = 1;
+	flood_fill(map, x + 1, y, ctx);
+	flood_fill(map, x - 1, y, ctx);
+	flood_fill(map, x, y + 1, ctx);
+	flood_fill(map, x, y - 1, ctx);
 }
 
 static void	check_borders(t_map *map, int **visited, int *leak)

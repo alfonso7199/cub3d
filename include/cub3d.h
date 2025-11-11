@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/11 16:14:57 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:33:30 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,12 @@ typedef struct s_game
 	t_player	player;
 	t_keys		keys;
 }	t_game;
+
+typedef struct s_fillctx
+{
+	int	**visited;
+	int	leak;
+}	t_fillctx;
 
 // Init
 void	set_mlx_settings(void);

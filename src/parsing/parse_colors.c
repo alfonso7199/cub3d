@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:52:18 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:02:25 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:27:56 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,15 @@ static void	set_ceiling_color(t_colors *color, int r, int g, int b)
 	color->ceiling_set = true;
 }
 
+static void	validate_split(char **split)
+{
+	if (!split || !split[0] || !split[1] || !split[2])
+	{
+		ft_putendl_fd("Error: invalid color format", STDOUT_FILENO);
+		exit(EXIT_FAILURE);
+	}
+}
+
 void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 {
 	char	**split;
@@ -61,11 +70,7 @@ void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 		return ;
 	split = ft_split(trimmed, ',');
 	free(trimmed);
-	if (!split || !split[0] || !split[1] || !split[2])
-	{
-		ft_putendl_fd("Error: invalid color format", STDOUT_FILENO);
-		exit(EXIT_FAILURE);
-	}
+	validate_split(split);
 	r = parse_component(split[0]);
 	g = parse_component(split[1]);
 	b = parse_component(split[2]);
