@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:52:18 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:27:56 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:39:10 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	set_floor_color(t_colors *color, int r, int g, int b)
 	color->floor_g = g;
 	color->floor_b = b;
 	color->floor = (0xFF << 24) | (r << 16) | (g << 8) | (b);
-	color->floor_set = true;
+	color->floor_set = TRUE;
 }
 
 static void	set_ceiling_color(t_colors *color, int r, int g, int b)
@@ -45,7 +45,7 @@ static void	set_ceiling_color(t_colors *color, int r, int g, int b)
 	color->ceiling_g = g;
 	color->ceiling_b = b;
 	color->ceiling = (0xFF << 24) | (r << 16) | (g << 8) | (b);
-	color->ceiling_set = true;
+	color->ceiling_set = TRUE;
 }
 
 static void	validate_split(char **split)
@@ -80,11 +80,3 @@ void	parse_color(t_colors *colors, char *line, t_bool is_floor)
 	else
 		set_ceiling_color(colors, r, g, b);
 }
-
-// floor:		11011100 01100100 00000000
-//				220			100		0
-// ceiling:		11100001 00011110 00000000
-//				225			30		0
-
-// F 220,100,0
-// C 225,30,0

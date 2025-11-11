@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 11:54:56 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/08 09:50:39 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:39:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static t_bool	is_start_of_map(char *line)
 	while (line[idx] && ft_isspace(line[idx]))
 		idx++;
 	if (line[idx] == '1' || line[idx] == '0')
-		return (true);
-	return (false);
+		return (TRUE);
+	return (FALSE);
 }
 
 static void	validate_all_required_fields(t_game *game)
@@ -49,12 +49,12 @@ static void	read_all_lines_and_parse(int fd, t_game *game)
 	char	*line;
 	t_bool	in_map_section;
 
-	in_map_section = false;
+	in_map_section = FALSE;
 	line = get_next_line(fd);
 	while (line)
 	{
 		if (!in_map_section && is_start_of_map(line))
-			in_map_section = true;
+			in_map_section = TRUE;
 		if (in_map_section)
 			parse_map_line(game, line);
 		else
@@ -72,11 +72,11 @@ int	open_file(t_game *game, const char *path)
 	if (fd < 0)
 	{
 		ft_putendl_fd("Error: cannot open file", STDERR_FILENO);
-		return (false);
+		return (FALSE);
 	}
 	read_all_lines_and_parse(fd, game);
 	close(fd);
 	validate_all_required_fields(game);
 	finalize_map(game);
-	return (true);
+	return (TRUE);
 }

@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:46:50 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 15:30:49 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:40:42 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ static void	assign_color(t_colors *colors, char *line, t_bool is_floor)
 	}
 	parse_color(colors, line, is_floor);
 	if (is_floor)
-		colors->floor_set = true;
+		colors->floor_set = TRUE;
 	else
-		colors->ceiling_set = true;
+		colors->ceiling_set = TRUE;
 }
 
 void	parse_field_line(t_game *game, char *line)
@@ -72,7 +72,7 @@ void	parse_field_line(t_game *game, char *line)
 	else if (!ft_strncmp(line, "EA ", 3))
 		assign_texture(&game->textures.east, line + 3);
 	else if (line[0] == 'F' && line[1] == ' ')
-		assign_color(&game->colors, line + 2, true);
+		assign_color(&game->colors, line + 2, TRUE);
 	else if (line[0] == 'C' && line[1] == ' ')
-		assign_color(&game->colors, line + 2, false);
+		assign_color(&game->colors, line + 2, FALSE);
 }

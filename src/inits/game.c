@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 12:26:43 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/08 09:52:30 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:40:49 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_game	*init_game(void)
 	game = malloc(sizeof(*game));
 	if (!game)
 		return (NULL);
-	game->mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, true);
+	game->mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, TRUE);
 	if (!game->mlx)
 	{
 		free(game);

@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:29:38 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:44:25 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static void	ft_error(void)
 	fprintf(stderr, "%s", mlx_strerror(mlx_errno));
 	exit(EXIT_FAILURE);
 }
+
 static void	game_loop(void *param)
 {
 	t_game	*game;
@@ -55,7 +56,7 @@ int	main(int argc, char *argv[])
 		return (EXIT_FAILURE);
 	set_mlx_settings();
 	ft_bzero(&game, sizeof(t_game));
-	game.mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, false);
+	game.mlx = mlx_init(WIN_WIDTH, WIN_HEIGHT, GAME_NAME, FALSE);
 	if (!game.mlx)
 		return (ft_error(), EXIT_FAILURE);
 	game.img = mlx_new_image(game.mlx, WIN_WIDTH, WIN_HEIGHT);
@@ -64,7 +65,6 @@ int	main(int argc, char *argv[])
 	open_file(&game, argv[1]);
 	mlx_loop_hook(game.mlx, &game_loop, &game);
 	mlx_loop(game.mlx);
-	mlx_terminate(game.mlx);
 	ft_free(&game);
 	return (EXIT_SUCCESS);
 }

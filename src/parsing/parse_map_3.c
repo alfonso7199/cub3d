@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 09:23:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:22:31 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/11 16:40:32 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static t_bool	is_player_char(char c)
 {
 	if (c == 'N' || c == 'S' || c == 'E' || c == 'W')
-		return (true);
-	return (false);
+		return (TRUE);
+	return (FALSE);
 }
 
 static void	process_player_position(t_game *game, int x, int y)
