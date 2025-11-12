@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 09:23:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/12 14:18:29 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:22:13 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,7 @@ static int	count_and_replace_players(t_game *game)
 		while (x < game->map.width)
 		{
 			if (is_player_char(game->map.grid[y][x]))
-			{
-				count++;
 				process_player_position(game, x, y, &count);
-			}
 			x++;
 		}
 		y++;

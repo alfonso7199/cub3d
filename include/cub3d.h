@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/11 16:33:30 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/12 13:17:22 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ typedef enum e_bool
 
 typedef struct s_texture_set
 {
-    mlx_texture_t	*north;
-    mlx_texture_t	*south;
-    mlx_texture_t	*east;
-    mlx_texture_t	*west;
+	mlx_texture_t	*north;
+	mlx_texture_t	*south;
+	mlx_texture_t	*east;
+	mlx_texture_t	*west;
 }	t_texture_set;
 
 typedef struct s_textures
@@ -81,7 +81,8 @@ typedef struct s_map
 	int		height;
 }	t_map;
 
-//TODO: todas las structuras son básicas, es para hacernos una idea inicial y luego ir viendo que más podemos necesitar
+//TODO: todas las structuras son básicas, es para hacernos una 
+// idea inicial y luego ir viendo que más podemos necesitar
 typedef struct s_vec2
 {
 	double	x;
@@ -124,14 +125,14 @@ typedef struct s_keys
 
 typedef struct s_game
 {
-	mlx_t		*mlx;
-	mlx_image_t	*img;
-	t_textures	textures;
+	mlx_t			*mlx;
+	mlx_image_t		*img;
+	t_textures		textures;
 	t_texture_set	tex_set;
-	t_colors	colors;
-	t_map		map;
-	t_player	player;
-	t_keys		keys;
+	t_colors		colors;
+	t_map			map;
+	t_player		player;
+	t_keys			keys;
 }	t_game;
 
 typedef struct s_fillctx

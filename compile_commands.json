@@ -13,9 +13,9 @@
       "obj/cub3d.o",
       "src/cub3d.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/cub3d.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/cub3d.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/cub3d.c",
+    "output": "/home/rzt/Documents/cub3d/obj/cub3d.o"
   },
   {
     "arguments": [
@@ -31,9 +31,9 @@
       "obj/engine/dda_algo.o",
       "src/engine/dda_algo.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/engine/dda_algo.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/engine/dda_algo.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/engine/dda_algo.c",
+    "output": "/home/rzt/Documents/cub3d/obj/engine/dda_algo.o"
   },
   {
     "arguments": [
@@ -49,9 +49,9 @@
       "obj/engine/raycasting.o",
       "src/engine/raycasting.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/engine/raycasting.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/engine/raycasting.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/engine/raycasting.c",
+    "output": "/home/rzt/Documents/cub3d/obj/engine/raycasting.o"
   },
   {
     "arguments": [
@@ -67,9 +67,9 @@
       "obj/events/event.o",
       "src/events/event.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/events/event.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/events/event.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/events/event.c",
+    "output": "/home/rzt/Documents/cub3d/obj/events/event.o"
   },
   {
     "arguments": [
@@ -85,9 +85,9 @@
       "obj/events/handle_keys.o",
       "src/events/handle_keys.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/events/handle_keys.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/events/handle_keys.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/events/handle_keys.c",
+    "output": "/home/rzt/Documents/cub3d/obj/events/handle_keys.o"
   },
   {
     "arguments": [
@@ -103,9 +103,9 @@
       "obj/events/player_movement.o",
       "src/events/player_movement.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/events/player_movement.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/events/player_movement.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/events/player_movement.c",
+    "output": "/home/rzt/Documents/cub3d/obj/events/player_movement.o"
   },
   {
     "arguments": [
@@ -121,9 +121,9 @@
       "obj/frees/free.o",
       "src/frees/free.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/frees/free.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/frees/free.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/frees/free.c",
+    "output": "/home/rzt/Documents/cub3d/obj/frees/free.o"
   },
   {
     "arguments": [
@@ -139,9 +139,9 @@
       "obj/inits/game.o",
       "src/inits/game.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/inits/game.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/inits/game.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/inits/game.c",
+    "output": "/home/rzt/Documents/cub3d/obj/inits/game.o"
   },
   {
     "arguments": [
@@ -157,9 +157,9 @@
       "obj/inits/settings.o",
       "src/inits/settings.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/inits/settings.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/inits/settings.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/inits/settings.c",
+    "output": "/home/rzt/Documents/cub3d/obj/inits/settings.o"
   },
   {
     "arguments": [
@@ -175,9 +175,9 @@
       "obj/parsing/parse_colors.o",
       "src/parsing/parse_colors.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/parsing/parse_colors.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/parsing/parse_colors.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/parsing/parse_colors.c",
+    "output": "/home/rzt/Documents/cub3d/obj/parsing/parse_colors.o"
   },
   {
     "arguments": [
@@ -193,9 +193,9 @@
       "obj/parsing/parse_field_line.o",
       "src/parsing/parse_field_line.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/parsing/parse_field_line.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/parsing/parse_field_line.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/parsing/parse_field_line.c",
+    "output": "/home/rzt/Documents/cub3d/obj/parsing/parse_field_line.o"
   },
   {
     "arguments": [
@@ -211,9 +211,27 @@
       "obj/parsing/parse_file.o",
       "src/parsing/parse_file.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/parsing/parse_file.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/parsing/parse_file.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/parsing/parse_file.c",
+    "output": "/home/rzt/Documents/cub3d/obj/parsing/parse_file.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/parsing/parse_map_1.o",
+      "src/parsing/parse_map_1.c"
+    ],
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/parsing/parse_map_1.c",
+    "output": "/home/rzt/Documents/cub3d/obj/parsing/parse_map_1.o"
   },
   {
     "arguments": [
@@ -229,9 +247,9 @@
       "obj/parsing/parse_map_3.o",
       "src/parsing/parse_map_3.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/parsing/parse_map_3.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/parsing/parse_map_3.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/parsing/parse_map_3.c",
+    "output": "/home/rzt/Documents/cub3d/obj/parsing/parse_map_3.o"
   },
   {
     "arguments": [
@@ -247,27 +265,9 @@
       "obj/parsing/parse_map_2.o",
       "src/parsing/parse_map_2.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/parsing/parse_map_2.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/parsing/parse_map_2.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/cc",
-      "-Wall",
-      "-Wextra",
-      "-Werror",
-      "-g",
-      "-I./include",
-      "-I./libft",
-      "-c",
-      "-o",
-      "obj/parsing/parse_map.o",
-      "src/parsing/parse_map.c"
-    ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/parsing/parse_map.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/parsing/parse_map.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/parsing/parse_map_2.c",
+    "output": "/home/rzt/Documents/cub3d/obj/parsing/parse_map_2.o"
   },
   {
     "arguments": [
@@ -283,9 +283,9 @@
       "obj/utils/ft_append_line.o",
       "src/utils/ft_append_line.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/utils/ft_append_line.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/utils/ft_append_line.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/utils/ft_append_line.c",
+    "output": "/home/rzt/Documents/cub3d/obj/utils/ft_append_line.o"
   },
   {
     "arguments": [
@@ -301,9 +301,9 @@
       "obj/utils/ft_free_split.o",
       "src/utils/ft_free_split.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/utils/ft_free_split.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/utils/ft_free_split.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/utils/ft_free_split.c",
+    "output": "/home/rzt/Documents/cub3d/obj/utils/ft_free_split.o"
   },
   {
     "arguments": [
@@ -319,9 +319,9 @@
       "obj/utils/ft_isspace.o",
       "src/utils/ft_isspace.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/utils/ft_isspace.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/utils/ft_isspace.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/utils/ft_isspace.c",
+    "output": "/home/rzt/Documents/cub3d/obj/utils/ft_isspace.o"
   },
   {
     "arguments": [
@@ -337,9 +337,9 @@
       "obj/validations/extension.o",
       "src/validations/extension.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/validations/extension.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/validations/extension.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/validations/extension.c",
+    "output": "/home/rzt/Documents/cub3d/obj/validations/extension.o"
   },
   {
     "arguments": [
@@ -355,8 +355,8 @@
       "obj/validations/map_check.o",
       "src/validations/map_check.c"
     ],
-    "directory": "/home/rzt/Documents/42/cub3d",
-    "file": "/home/rzt/Documents/42/cub3d/src/validations/map_check.c",
-    "output": "/home/rzt/Documents/42/cub3d/obj/validations/map_check.o"
+    "directory": "/home/rzt/Documents/cub3d",
+    "file": "/home/rzt/Documents/cub3d/src/validations/map_check.c",
+    "output": "/home/rzt/Documents/cub3d/obj/validations/map_check.o"
   }
 ]

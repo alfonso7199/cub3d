@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/11 16:02:52 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/12 14:19:00 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC_FILES	= \
 	$(SRC_DIR)/events/player_movement.c \
 	$(SRC_DIR)/frees/free.c \
 	$(SRC_DIR)/inits/game.c \
+	$(SRC_DIR)/inits/player.c \
 	$(SRC_DIR)/inits/settings.c \
 	$(SRC_DIR)/parsing/parse_colors.c \
 	$(SRC_DIR)/parsing/parse_field_line.c \

@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:01:41 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:38:09 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/12 14:16:39 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ static void	flood_fill(t_map *map, int x, int y, t_fillctx *ctx)
 {
 	if (x < 0 || y < 0 || x >= map->width || y >= map->height)
 		return ;
-	if (ctx->visited[y][x] == 1)
+	if (ctx->visited[y][x])
 		return ;
-	if (map->grid[y][x] != ' ')
+	if (map->grid[y][x] == '1')
 		return ;
 	ctx->visited[y][x] = 1;
 	if (ft_strchr("0NSEW", map->grid[y][x]))
@@ -74,7 +74,7 @@ static void	check_borders(t_map *map, t_fillctx *ctx)
 		{
 			if ((y == 0 || y == map->height - 1
 					|| x == 0 || x == map->width - 1)
-				&& map->grid[y][x] == ' ')
+				&& map->grid[y][x] != '1')
 				flood_fill(map, x, y, ctx);
 			x++;
 		}
