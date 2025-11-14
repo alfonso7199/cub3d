@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/12 14:19:00 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/14 09:59:35 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC_FILES	= \
 	$(SRC_DIR)/inits/game.c \
 	$(SRC_DIR)/inits/player.c \
 	$(SRC_DIR)/inits/settings.c \
+	$(SRC_DIR)/inits/textures.c \
 	$(SRC_DIR)/parsing/parse_colors.c \
 	$(SRC_DIR)/parsing/parse_field_line.c \
 	$(SRC_DIR)/parsing/parse_file.c \
@@ -104,3 +105,6 @@ run:	re
 # (yay -S bear). And can follow link to function definition or declaration
 
 # bear -- make clean all
+
+# Force X11 instead of Wayland (before run ./cub3d)
+# export XDG_SESSION_TYPE=x11

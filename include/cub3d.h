@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/12 13:17:22 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/14 09:57:38 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,6 +185,10 @@ void	key_event(mlx_key_data_t keydata, void *param);
 void	key_press(t_game *game, int key);
 void	key_release(t_game *game, int key);
 int		close_game(t_game *game);
+
+// Textures
+void	load_textures(t_game *game);
+void	free_textures(t_game *game);
 
 // Free
 void	ft_free(t_game *game);

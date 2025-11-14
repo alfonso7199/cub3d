@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 12:29:17 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/03 17:41:54 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/14 09:58:40 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,7 @@ void	ft_free(t_game *game)
 {
 	if (!game)
 		return ;
-	if (game->textures.north)
-		free(game->textures.north);
-	if (game->textures.south)
-		free(game->textures.south);
-	if (game->textures.east)
-		free(game->textures.east);
-	if (game->textures.west)
-		free(game->textures.west);
+	free_textures(game);
 	if (game->map.grid)
 		ft_free_split(game->map.grid);
 	if (game->img)
