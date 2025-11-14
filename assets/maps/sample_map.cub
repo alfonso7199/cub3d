@@ -1,7 +1,7 @@
-NO ./assets/textures/blue_stone.xpm
-SO ./assets/textures/color_stone.xpm
-WE ./assets/textures/grey_stone.xpm
-EA ./assets/textures/purple_stone.xpm
+NO assets/textures/blue_stone.png
+SO assets/textures/color_stone.png
+WE assets/textures/grey_stone.png
+EA assets/textures/purple_stone.png
 
 F 220,100,0
 C 225,30,0

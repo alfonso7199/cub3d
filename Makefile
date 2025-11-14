@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/14 10:20:09 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/14 10:34:54 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,12 +91,12 @@ keycap:
 	@cc src/mlx42_test.c mlx/libmlx42.a $(MLX_FLAGS) -o keycapture
 
 run:	re
-	@	@./$(NAME) assets/maps/cheese_maze.cub
-	@	@./$(NAME) assets/maps/creepy.cub
-	@	@./$(NAME) assets/maps/dungeon.cub
-	@	@./$(NAME) assets/maps/library.cub
-	@	@./$(NAME) assets/maps/sad_face.cub
-	@	@./$(NAME) assets/maps/sample_map.cub
+	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/cheese_maze.cub
+	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/creepy.cub
+	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/dungeon.cub
+	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/library.cub
+	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/sad_face.cub
+	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/sample_map.cub
 
 .PHONY: all clean fclean re
 
@@ -107,3 +107,5 @@ run:	re
 
 # Force X11 instead of Wayland (before run ./cub3d)
 # export XDG_SESSION_TYPE=x11
+
+# The sample_map is not working properly
