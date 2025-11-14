@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/14 09:57:38 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/14 10:19:31 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,8 +179,6 @@ void	rotate_player(t_game *game, double rot_speed);
 t_bool	is_wall(t_game *game, int x, int y);
 
 // Events
-int		handle_no_event(void *game);
-int		handle_input(int keysym, void *param);
 void	key_event(mlx_key_data_t keydata, void *param);
 void	key_press(t_game *game, int key);
 void	key_release(t_game *game, int key);

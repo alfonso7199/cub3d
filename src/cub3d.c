@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/14 09:59:06 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/14 10:18:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static void	game_loop(void *param)
 	game = (t_game *)param;
 	update_movement(game);
 	render_frame(game);
+	close_game(game);
 }
 
 void	check_parse(t_game game)
