@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/14 10:19:31 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:38:23 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,6 +187,8 @@ int		close_game(t_game *game);
 // Textures
 void	load_textures(t_game *game);
 void	free_textures(t_game *game);
+void	validate_texture_paths(t_textures *textures);
+void	draw_textured_column(t_game *game, t_ray *ray, int x);
 
 // Free
 void	ft_free(t_game *game);

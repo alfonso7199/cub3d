@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/14 10:18:54 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:38:28 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int	main(int argc, char *argv[])
 	if (!game.img || (mlx_image_to_window(game.mlx, game.img, 0, 0) < 0))
 		return (ft_error(), EXIT_FAILURE);
 	open_file(&game, argv[1]);
+	validate_texture_paths(&game.textures);
 	load_textures(&game);
 	mlx_key_hook(game.mlx, &key_event, &game);
 	mlx_loop_hook(game.mlx, &game_loop, &game);

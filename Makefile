@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/14 10:34:54 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/18 17:39:22 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC_FILES	= \
 	$(SRC_DIR)/events/player_movement.c \
 	$(SRC_DIR)/frees/free.c \
 	$(SRC_DIR)/inits/game.c \
+	$(SRC_DIR)/inits/setting_textures.c \
 	$(SRC_DIR)/inits/player.c \
 	$(SRC_DIR)/inits/settings.c \
 	$(SRC_DIR)/inits/textures.c \
@@ -48,7 +49,8 @@ SRC_FILES	= \
 	$(SRC_DIR)/utils/ft_free_split.c \
 	$(SRC_DIR)/utils/ft_isspace.c \
 	$(SRC_DIR)/validations/extension.c \
-	$(SRC_DIR)/validations/map_check.c
+	$(SRC_DIR)/validations/map_check.c \
+	$(SRC_DIR)/validations/tex_extension.c
 # 	$(SRC_DIR)/events/player_movement.c
 
 
@@ -91,12 +93,12 @@ keycap:
 	@cc src/mlx42_test.c mlx/libmlx42.a $(MLX_FLAGS) -o keycapture
 
 run:	re
-	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/cheese_maze.cub
-	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/creepy.cub
-	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/dungeon.cub
-	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/library.cub
-	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/sad_face.cub
-	@	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/sample_map.cub
+	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/cheese_maze.cub
+	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/creepy.cub
+	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/dungeon.cub
+	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/library.cub
+	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/sad_face.cub
+	@XDG_SESSION_TYPE=x11 ./$(NAME) assets/maps/sample_map.cub
 
 .PHONY: all clean fclean re
 
@@ -109,3 +111,5 @@ run:	re
 # export XDG_SESSION_TYPE=x11
 
 # The sample_map is not working properly
+
+# valgrind --leak-check=full --track-origins=yes ./cub3d maps/test.cub
