@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 09:23:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/12 14:22:13 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/18 18:40:14 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static t_bool	is_player_char(char c)
 	return (FALSE);
 }
 
-static void	process_player_position(t_game *game, int x, int y, int *player_count)
+static void	process_player_position(t_game *game, int x, int y,
+int *player_count)
 {
 	if (*player_count == 0)
 		init_player(game, x, y, game->map.grid[y][x]);

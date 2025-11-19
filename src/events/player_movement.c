@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/10/30 16:43:11 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/18 18:44:02 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,14 @@ void	rotate_player(t_game *game, double rot_speed)
 
 	old_dir_x = game->player.dir.x;
 	old_plane_x = game->player.plane.x;
-	game->player.dir.x = game->player.dir.x * cos(rot_speed) - \
-						game->player.dir.y * sin(rot_speed);
-	game->player.dir.y = old_dir_x * sin(rot_speed) + \
-						game->player.dir.y * cos(rot_speed);
-	game->player.plane.x = game->player.plane.x * cos(rot_speed) - \
-							game->player.plane.y * sin(rot_speed);
-	game->player.plane.y = old_plane_x * sin(rot_speed) + \
-							game->player.plane.y * cos(rot_speed);
+	game->player.dir.x = game->player.dir.x * cos(rot_speed)
+		- game->player.dir.y * sin(rot_speed);
+	game->player.dir.y = old_dir_x * sin(rot_speed)
+		+ game->player.dir.y * cos(rot_speed);
+	game->player.plane.x = game->player.plane.x * cos(rot_speed)
+		- game->player.plane.y * sin(rot_speed);
+	game->player.plane.y = old_plane_x * sin(rot_speed)
+		+ game->player.plane.y * cos(rot_speed);
 }
 
 //Hay que llamarlo desde el loop principal

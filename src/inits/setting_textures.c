@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:29:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/18 18:04:16 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/18 18:41:01 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	get_tex_x(t_ray *ray, mlx_texture_t *tex, t_player *player)
 	if (ray->side == 0)
 		wall_x = player->pos.y + ray->perp_wall_dist * ray->dir.y;
 	else
-	 	wall_x = player->pos.x + ray->perp_wall_dist * ray->dir.x;
+		wall_x = player->pos.x + ray->perp_wall_dist * ray->dir.x;
 	wall_x -= floor(wall_x);
 	tex_x = (int)(wall_x * (double)tex->width);
 	if ((ray->side == 0 && ray->dir.x > 0)
@@ -43,6 +43,7 @@ static int	get_tex_x(t_ray *ray, mlx_texture_t *tex, t_player *player)
 		tex_x = tex->width - 1;
 	return (tex_x);
 }
+
 static uint32_t	get_tex_color(mlx_texture_t *tex, int x, int y)
 {
 	int		idx;

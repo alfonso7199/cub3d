@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/18 17:38:23 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/18 18:46:32 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,6 +145,7 @@ typedef struct s_fillctx
 void	set_mlx_settings(void);
 t_game	*init_game(void);
 void	init_player(t_game *game, int x, int y, char orientation);
+void	set_dir_plane(t_player *player, char orientation);
 
 // validations - extension
 t_bool	validate_map_extension(const char *path);
