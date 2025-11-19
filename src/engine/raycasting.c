@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:52:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/18 17:37:31 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/18 17:56:43 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,14 @@ void	draw_vertical_line(t_game *game, t_ray *ray, int x)
 {
 	int	y;
 
-	y = -1;
-	while (++y < ray->draw_start)
+	y = 0;
+	while (y < ray->draw_start)
+	{
 		mlx_put_pixel(game->img, x, y, game->colors.ceiling);
+		y++;
+	}
 	draw_textured_column(game, ray, x);
-	y = ray->draw_end - 1;
+	y = ray->draw_end;
 	while (++y < WIN_HEIGHT)
 		mlx_put_pixel(game->img, x, y, game->colors.floor);
 }
