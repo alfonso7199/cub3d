@@ -35,7 +35,7 @@ static void	set_floor_color(t_colors *color, int r, int g, int b)
 	color->floor_r = r;
 	color->floor_g = g;
 	color->floor_b = b;
-	color->floor = (0xFF << 24) | (r << 16) | (g << 8) | (b);
+	color->floor = (r << 24) | (g << 16) | (b << 8) | 0xFF;
 	color->floor_set = TRUE;
 }
 
@@ -44,7 +44,7 @@ static void	set_ceiling_color(t_colors *color, int r, int g, int b)
 	color->ceiling_r = r;
 	color->ceiling_g = g;
 	color->ceiling_b = b;
-	color->ceiling = (0xFF << 24) | (r << 16) | (g << 8) | (b);
+	color->ceiling = (r << 24) | (g << 16) | (b << 8) | 0xFF;
 	color->ceiling_set = TRUE;
 }
 

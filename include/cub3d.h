@@ -37,6 +37,7 @@
 # define MOVE_SPEED 0.02
 # define ROT_SPEED 0.015
 # define M_PI 3.14159265358979323846
+# define MAX_SHADE_DIST 5.0f
 
 typedef enum e_bool
 {
@@ -142,62 +143,63 @@ typedef struct s_fillctx
 }	t_fillctx;
 
 // Init
-void	set_mlx_settings(void);
-t_game	*init_game(void);
-void	init_player(t_game *game, int x, int y, char orientation);
-void	set_dir_plane(t_player *player, char orientation);
+void		set_mlx_settings(void);
+t_game		*init_game(void);
+void		init_player(t_game *game, int x, int y, char orientation);
+void		set_dir_plane(t_player *player, char orientation);
 
 // validations - extension
-t_bool	validate_map_extension(const char *path);
-t_bool	is_map_closed(t_map *map);
+t_bool		validate_map_extension(const char *path);
+t_bool		is_map_closed(t_map *map);
 
 // Parsing
-int		open_file(t_game *game, const char *path);
-void	parse_map_line(t_game *game, char *line);
-void	parse_field_line(t_game *game, char *line);
-void	parse_color(t_colors *colors, char *line, t_bool is_floor);
-void	normalize_map_with_spaces(t_map *map);
-void	finalize_map(t_game *game);
+int			open_file(t_game *game, const char *path);
+void		parse_map_line(t_game *game, char *line);
+void		parse_field_line(t_game *game, char *line);
+void		parse_color(t_colors *colors, char *line, t_bool is_floor);
+void		normalize_map_with_spaces(t_map *map);
+void		finalize_map(t_game *game);
 
 // DDA
-void	init_dda(t_ray *ray, t_player *player);
-int		hit_wall(t_game *game, t_ray *ray);
-void	dda_loop(t_ray *ray);
-void	perpendicular_dist(t_ray *ray);
-void	dda(t_game *game, t_ray *ray);
+void		init_dda(t_ray *ray, t_player *player);
+int			hit_wall(t_game *game, t_ray *ray);
+void		dda_loop(t_ray *ray);
+void		perpendicular_dist(t_ray *ray);
+void		dda(t_game *game, t_ray *ray);
 
 //Raycasting
-void	render_frame(t_game *game);
-void	cast_rays(t_game *game);
-void	calculate_ray_dir(t_ray *ray, t_player *player, int x);
-void	calculate_height(t_ray *ray);
-void	draw_vertical_line(t_game *game, t_ray *ray, int x);
+void		render_frame(t_game *game);
+void		cast_rays(t_game *game);
+void		calculate_ray_dir(t_ray *ray, t_player *player, int x);
+void		calculate_height(t_ray *ray);
+void		draw_vertical_line(t_game *game, t_ray *ray, int x);
 
 // Movement
-void	update_movement(t_game *game);
-void	move_player(t_game *game, double move_x, double move_y);
-void	rotate_player(t_game *game, double rot_speed);
-t_bool	is_wall(t_game *game, int x, int y);
-void	handle_mouse(double xpos, double ypos, void *param);
+void		update_movement(t_game *game);
+void		move_player(t_game *game, double move_x, double move_y);
+void		rotate_player(t_game *game, double rot_speed);
+t_bool		is_wall(t_game *game, int x, int y);
+void		handle_mouse(double xpos, double ypos, void *param);
 
 // Events
-void	key_event(mlx_key_data_t keydata, void *param);
-void	key_press(t_game *game, int key);
-void	key_release(t_game *game, int key);
-int		close_game(t_game *game);
+void		key_event(mlx_key_data_t keydata, void *param);
+void		key_press(t_game *game, int key);
+void		key_release(t_game *game, int key);
+int			close_game(t_game *game);
 
 // Textures
-void	load_textures(t_game *game);
-void	free_textures(t_game *game);
-void	validate_texture_paths(t_textures *textures);
-void	draw_textured_column(t_game *game, t_ray *ray, int x);
+void		load_textures(t_game *game);
+void		free_textures(t_game *game);
+void		validate_texture_paths(t_textures *textures);
+void		draw_textured_column(t_game *game, t_ray *ray, int x);
+uint32_t	darker_color(uint32_t color, float factor);
 
 // Free
-void	ft_free(t_game *game);
+void		ft_free(t_game *game);
 
 // Utils
-int		ft_isspace(int c);
-char	**ft_append_line(char **old, char *new_line);
-void	ft_free_split(char **split);
+int			ft_isspace(int c);
+char		**ft_append_line(char **old, char *new_line);
+void		ft_free_split(char **split);
 
 #endif

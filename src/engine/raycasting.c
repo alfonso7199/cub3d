@@ -32,46 +32,28 @@ void	calculate_height(t_ray *ray)
 		ray->draw_end = WIN_HEIGHT - 1;
 }
 
-/* 
 void	draw_vertical_line(t_game *game, t_ray *ray, int x)
 {
-	int		y;
-	int		color;
-
-	y = 0;
-	while (y < WIN_HEIGHT)
-	{
-		if (y < ray->draw_start)
-			color = game->colors.ceiling;
-		else if (y >= ray->draw_start && y <= ray->draw_end)
-		{
-			if (ray->side == 0)
-				color = 0xFF0000;
-			else
-				color = 0x880000;
-		}
-		else
-			color = game->colors.floor;
-		mlx_put_pixel(game->img, x, y, color);
-		y++;
-	}
-}
-*/
-
-void	draw_vertical_line(t_game *game, t_ray *ray, int x)
-{
-	int	y;
+	int			y;
+	float		dist;
+	uint32_t	color;
 
 	y = 0;
 	while (y < ray->draw_start)
 	{
-		mlx_put_pixel(game->img, x, y, game->colors.ceiling);
+		dist = (WIN_HEIGHT / 2.0f) / (WIN_HEIGHT / 2.0f - y);
+		color = darker_color(game->colors.ceiling, dist / 6.0f);
+		mlx_put_pixel(game->img, x, y, color);
 		y++;
 	}
 	draw_textured_column(game, ray, x);
 	y = ray->draw_end;
 	while (++y < WIN_HEIGHT)
-		mlx_put_pixel(game->img, x, y, game->colors.floor);
+	{
+		dist = (WIN_HEIGHT / 2.0f) / (y - WIN_HEIGHT / 2.0f);
+		color = darker_color(game->colors.floor, dist / 6.0f);
+		mlx_put_pixel(game->img, x, y, color);
+	}
 }
 
 void	cast_rays(t_game *game)

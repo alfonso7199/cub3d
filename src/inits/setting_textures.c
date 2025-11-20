@@ -69,6 +69,7 @@ void	draw_textured_column(t_game *game, t_ray *ray, int x)
 	int				tex_x;
 	double			step;
 	double			tex_pos;
+	uint32_t		color;
 
 	tex = get_wall_texture(game, ray);
 	tex_x = get_tex_x(ray, tex, &game->player);
@@ -76,9 +77,9 @@ void	draw_textured_column(t_game *game, t_ray *ray, int x)
 	tex_pos = (ray->draw_start - WIN_HEIGHT / 2 + ray->line_height / 2) * step;
 	while (ray->draw_start < ray->draw_end)
 	{
-		mlx_put_pixel(game->img, x, ray->draw_start,
-			get_tex_color(tex, tex_x,
-				(int)tex_pos % tex->height));
+		color = get_tex_color(tex, tex_x, (int)tex_pos % tex->height);
+		color = darker_color(color, ray->perp_wall_dist / 10.0f);
+		mlx_put_pixel(game->img, x, ray->draw_start, color);
 		tex_pos += step;
 		ray->draw_start++;
 	}
