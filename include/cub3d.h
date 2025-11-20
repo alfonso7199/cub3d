@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/19 18:12:49 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/19 18:15:01 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,7 +178,7 @@ void	update_movement(t_game *game);
 void	move_player(t_game *game, double move_x, double move_y);
 void	rotate_player(t_game *game, double rot_speed);
 t_bool	is_wall(t_game *game, int x, int y);
-void    handle_mouse(double xpos, double ypos, void *param);
+void	handle_mouse(double xpos, double ypos, void *param);
 
 // Events
 void	key_event(mlx_key_data_t keydata, void *param);
