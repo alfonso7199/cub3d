@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/20 12:39:01 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/20 12:55:42 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ OBJ_DIR		= obj
 SRC_FILES	= \
 	$(SRC_DIR)/cub3d.c \
 	$(SRC_DIR)/engine/dda_algo.c \
+	$(SRC_DIR)/engine/minimap.c \
 	$(SRC_DIR)/engine/raycasting.c \
 	$(SRC_DIR)/events/handle_keys.c \
 	$(SRC_DIR)/events/handle_mouse.c \

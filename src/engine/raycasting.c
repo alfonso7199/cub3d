@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:52:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/20 12:35:48 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:55:13 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,5 @@ void	render_frame(t_game *game)
 	if (!game->img)
 		return ;
 	cast_rays(game);
+	render_minimap(game);
 }

@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/19 18:15:01 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:59:54 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@
 # define ROT_SPEED 0.015
 # define M_PI 3.14159265358979323846
 # define MAX_SHADE_DIST 5.0f
+
+// Minimap
+#define MM_SCALE 5
+#define MM_WALL_COLOR 0xFFFFFFFF
+#define MM_FLOOR_COLOR 0x000000FF
+#define MM_PLAYER_COLOR 0xFF0000FF
 
 typedef enum e_bool
 {
@@ -173,6 +179,7 @@ void		cast_rays(t_game *game);
 void		calculate_ray_dir(t_ray *ray, t_player *player, int x);
 void		calculate_height(t_ray *ray);
 void		draw_vertical_line(t_game *game, t_ray *ray, int x);
+void		render_minimap(t_game *game);
 
 // Movement
 void		update_movement(t_game *game);
