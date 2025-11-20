@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 12:44:49 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/20 12:59:36 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 13:09:11 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,15 @@ static void	draw_square(t_game *game, int x, int y, uint32_t color)
 	}
 }
 
+static int	get_mm_color(char tile)
+{
+	if (tile == '1')
+		return (MM_WALL_COLOR);
+	if (tile == '0' || ft_strchr("NSEW", tile))
+		return (MM_FLOOR_COLOR);
+	return (0);
+}
+
 void	render_minimap(t_game *game)
 {
 	int	x;
@@ -43,14 +52,8 @@ void	render_minimap(t_game *game)
 		x = 0;
 		while (x < game->map.width)
 		{
-			if (game->map.grid[y][x] == '1')
-				color = MM_WALL_COLOR;
-			else if (game->map.grid[y][x] == '0' || ft_strchr("NSEW",
-				game->map.grid[y][x]))
-				color = MM_FLOOR_COLOR;
-			else
-				color = 0;
-			if (color != 0)
+			color = get_mm_color(game->map.grid[y][x]);
+			if (color)
 				draw_square(game, x * MM_SCALE, y * MM_SCALE, color);
 			x++;
 		}
