@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 17:29:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/18 18:41:01 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:36:14 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static mlx_texture_t	*get_wall_texture(t_game *game, t_ray *ray)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   dda_algo.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rzamolo- <rzamolo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 14:52:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/30 18:45:28 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:35:43 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 //Calcula un rayo por columna por asi decirlo, por frame
 //Por lo que igual toca bajar el número de frames maximo si vemos que va lento
 

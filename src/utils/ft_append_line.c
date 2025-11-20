@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:11:35 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 15:14:31 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:37:55 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 char	**ft_append_line(char **old, char *new_line)
 {

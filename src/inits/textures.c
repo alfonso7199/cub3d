@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 09:45:01 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/14 14:29:17 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:36:24 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	exit_texture_error(char *path)
 {

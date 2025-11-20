@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:07:45 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/08 09:51:12 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:37:44 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	copy_original_chars(char *new_line, char *old_line, int curr_len)
 {

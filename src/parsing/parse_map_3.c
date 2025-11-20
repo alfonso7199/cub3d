@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 09:23:52 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/18 18:40:14 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:37:50 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static t_bool	is_player_char(char c)
 {

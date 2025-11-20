@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:52:14 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/18 17:56:43 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:35:48 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 void	calculate_ray_dir(t_ray *ray, t_player *player, int x)
 {

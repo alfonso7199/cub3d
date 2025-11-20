@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 18:05:58 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/19 18:08:56 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:35:17 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 void	handle_mouse(double xpos, double ypos, void *param)
 {

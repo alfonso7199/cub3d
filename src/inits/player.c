@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 13:31:06 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/18 18:46:46 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:36:09 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static void	set_north(t_player *player)
 {

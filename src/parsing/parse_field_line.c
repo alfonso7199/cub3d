@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:46:50 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/11 16:40:42 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:36:34 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/cub3d.h"
+#include "cub3d.h"
 
 static char	*dup_trim_path(char *path)
 {

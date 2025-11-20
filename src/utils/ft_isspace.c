@@ -6,11 +6,11 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 14:33:10 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/10/31 14:38:11 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 12:38:05 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/cub3d.h"
+#include "cub3d.h"
 
 int	ft_isspace(int c)
 {
