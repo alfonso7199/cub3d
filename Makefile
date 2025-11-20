@@ -6,7 +6,7 @@
 #    By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/12 22:37:10 by rzt               #+#    #+#              #
-#    Updated: 2025/11/18 17:39:22 by rzamolo-         ###   ########.fr        #
+#    Updated: 2025/11/19 18:09:37 by rzamolo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC_FILES	= \
 	$(SRC_DIR)/engine/dda_algo.c \
 	$(SRC_DIR)/engine/raycasting.c \
 	$(SRC_DIR)/events/handle_keys.c \
+	$(SRC_DIR)/events/handle_mouse.c \
 	$(SRC_DIR)/events/player_movement.c \
 	$(SRC_DIR)/frees/free.c \
 	$(SRC_DIR)/inits/game.c \

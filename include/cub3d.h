@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/18 18:46:32 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/19 18:12:49 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@
 # define RED      "\033[31m"
 
 // MLX
-# define WIN_WIDTH 480
-# define WIN_HEIGHT 480
+# define WIN_WIDTH 1024
+# define WIN_HEIGHT 768
 # define GAME_NAME "CUB3D"
 
 // No se si es lento o rápido, habra que ver
@@ -178,6 +178,7 @@ void	update_movement(t_game *game);
 void	move_player(t_game *game, double move_x, double move_y);
 void	rotate_player(t_game *game, double rot_speed);
 t_bool	is_wall(t_game *game, int x, int y);
+void    handle_mouse(double xpos, double ypos, void *param);
 
 // Events
 void	key_event(mlx_key_data_t keydata, void *param);

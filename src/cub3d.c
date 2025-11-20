@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 14:34:26 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/14 14:38:28 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/19 18:12:22 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,9 @@ int	main(int argc, char *argv[])
 		return (ft_error(), EXIT_FAILURE);
 	open_file(&game, argv[1]);
 	validate_texture_paths(&game.textures);
+	mlx_set_cursor_mode(game.mlx, MLX_MOUSE_HIDDEN);
 	load_textures(&game);
+	mlx_cursor_hook(game.mlx, &handle_mouse, &game);
 	mlx_key_hook(game.mlx, &key_event, &game);
 	mlx_loop_hook(game.mlx, &game_loop, &game);
 	mlx_loop(game.mlx);
