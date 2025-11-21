@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 19:03:23 by alfsanch          #+#    #+#             */
-/*   Updated: 2025/11/20 12:59:54 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 19:42:18 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@
 # define MAX_SHADE_DIST 5.0f
 
 // Minimap
-#define MM_SCALE 5
-#define MM_WALL_COLOR 0xFFFFFFFF
-#define MM_FLOOR_COLOR 0x000000FF
-#define MM_PLAYER_COLOR 0xFF0000FF
+# define MM_SCALE 5
+# define MM_WALL_COLOR 0xFFFFFFFF
+# define MM_FLOOR_COLOR 0x000000FF
+# define MM_PLAYER_COLOR 0xFF0000FF
 
 typedef enum e_bool
 {
@@ -196,13 +196,14 @@ int			close_game(t_game *game);
 
 // Textures
 void		load_textures(t_game *game);
-void		free_textures(t_game *game);
 void		validate_texture_paths(t_textures *textures);
 void		draw_textured_column(t_game *game, t_ray *ray, int x);
 uint32_t	darker_color(uint32_t color, float factor);
 
 // Free
 void		ft_free(t_game *game);
+void		free_textures(t_game *game);
+void		free_textures_path(t_textures *textures);
 
 // Utils
 int			ft_isspace(int c);

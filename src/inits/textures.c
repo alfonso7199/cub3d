@@ -6,7 +6,7 @@
 /*   By: rzamolo- <rzamolo-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 09:45:01 by rzamolo-          #+#    #+#             */
-/*   Updated: 2025/11/20 12:36:24 by rzamolo-         ###   ########.fr       */
+/*   Updated: 2025/11/20 19:41:12 by rzamolo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,4 @@ void	load_textures(t_game *game)
 	game->tex_set.south = load_single_texture(game->textures.south);
 	game->tex_set.east = load_single_texture(game->textures.east);
 	game->tex_set.west = load_single_texture(game->textures.west);
-}
-
-void	free_textures(t_game *game)
-{
-	if (game->tex_set.north)
-		mlx_delete_texture(game->tex_set.north);
-	if (game->tex_set.south)
-		mlx_delete_texture(game->tex_set.south);
-	if (game->tex_set.east)
-		mlx_delete_texture(game->tex_set.east);
-	if (game->tex_set.west)
-		mlx_delete_texture(game->tex_set.west);
 }
